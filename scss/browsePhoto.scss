@@ -7,18 +7,131 @@
     grid-template-rows: 100px minmax(300px, auto);
     align-items: center;
 
-    nav {
+    .header {
         grid-column: 1 / 4;
         position: sticky;
         top: 0;
         width: 100%;
         background-color: $ColorWithTransparency;
+
+        .gridContainerForHeader {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        
+            .sortPd {
+                grid-column: 1 / 2;
+        
+                .sortPulldown {
+                    padding: 5px 15px;
+                    border-radius: 10px;
+                    color: gray;
+                }
+            }
+        
+            .filterPd {
+                grid-column: 3 / 4;
+        
+                .filterPulldown {
+                    padding: 5px 15px;
+                    border-radius: 10px;
+                    color: gray;
+                }
+            }
+        
+            .miyasPhoto {
+                grid-column: 9 / 11;
+                font-size: $fontsizeForHeader;
+                margin: 0;
+                padding: 0;
+        
+                a {
+                    display: block;
+                    margin: 0;
+                    padding: 13px 0;
+                    color: gray;
+                    font-size: $fontsizeForHeader;
+                    font-weight: bold;
+                    line-height: 1;
+                    text-decoration: none;
+                }
+            }
+        
+            .links {
+                grid-column: 11 / 12;
+                font-size: $fontsizeForHeader;
+        
+                a {
+                    display: block;
+                    margin: 0;
+                    padding: 13px 0;
+                    color: gray;
+                    font-size: $fontsizeForHeader;
+                    font-weight: bold;
+                    line-height: 1;
+                    text-decoration: none;
+                }
+            }
+        
+            .profile {
+                grid-column: 12 / 13;
+                position: relative;
+                margin: 0;
+                padding: 0;
+        
+                &:hover .dropDownMenu li {
+                    overflow: visible;
+                    height: 38px;
+                    border-bottom: 1px solid #fff;
+                }
+        
+                a {
+                    display: block;
+                    margin: 0;
+                    padding: 13px 0;
+                    color: gray;
+                    font-size: $fontsizeForHeader;
+                    font-weight: bold;
+                    line-height: 1;
+                    text-decoration: none;
+                }
+                .dropDownMenu {
+                    position: absolute;
+                    // top: 100%;
+                    left: 0;
+                    margin: 0;
+                    padding: 0;
+        
+                    li {
+                        overflow: hidden;
+                        width: 200%;
+                        height: 0;
+                        color: gray;
+                        transition: .2s;
+                    }
+        
+                    a {
+                        // padding: 13px 15px;
+                        // text-align: left;
+                        font-size: $fontsizeForHeader;
+                        font-weight: normal;
+                    }
+                }
+             }
+         }
+    }
+
+    .headerHamburgerMenu {
+        display: none;
+    }
+
+    .containerGridPictures {
+       grid-column: 1 / 4;
+       display: grid; 
+       grid-template-columns: repeat(3, 1fr);
     }
 
     .boardForPhotos {
-        // background: #ffeadb;
         background: linear-gradient(135deg, #fff2e6, #ffe5cc);
-        // text-align: center;
         align-items: center;
         display: flex;
         flex-direction: column;
@@ -43,115 +156,6 @@
     }
 }
 
-.gridContainerForHeader {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-
-    .sortPd {
-        grid-column: 1 / 2;
-
-        .sortPulldown {
-            padding: 5px 15px;
-            border-radius: 10px;
-            color: gray;
-        }
-    }
-
-    .filterPd {
-        grid-column: 3 / 4;
-
-        .filterPulldown {
-            padding: 5px 15px;
-            border-radius: 10px;
-            color: gray;
-            
-            option {
-                background-color: lightcoral;
-            }
-        }
-    }
-
-    .miyasPhoto {
-        grid-column: 9 / 11;
-        font-size: $fontsizeForHeader;
-        margin: 0;
-        padding: 0;
-
-        a {
-            display: block;
-            margin: 0;
-            padding: 13px 0;
-            color: gray;
-            font-size: $fontsizeForHeader;
-            font-weight: bold;
-            line-height: 1;
-            text-decoration: none;
-        }
-    }
-
-    .links {
-        grid-column: 11 / 12;
-        font-size: $fontsizeForHeader;
-
-        a {
-            display: block;
-            margin: 0;
-            padding: 13px 0;
-            color: gray;
-            font-size: $fontsizeForHeader;
-            font-weight: bold;
-            line-height: 1;
-            text-decoration: none;
-        }
-    }
-
-    .profile {
-        grid-column: 12 / 13;
-        position: relative;
-        margin: 0;
-        padding: 0;
-
-        &:hover .dropDownMenu li {
-            overflow: visible;
-            height: 38px;
-            border-bottom: 1px solid #fff;
-        }
-
-        a {
-            display: block;
-            margin: 0;
-            padding: 13px 0;
-            color: gray;
-            font-size: $fontsizeForHeader;
-            font-weight: bold;
-            line-height: 1;
-            text-decoration: none;
-        }
-        .dropDownMenu {
-            position: absolute;
-            // top: 100%;
-            left: 0;
-            margin: 0;
-            padding: 0;
-
-            li {
-                overflow: hidden;
-                width: 200%;
-                height: 0;
-                color: gray;
-                transition: .2s;
-            }
-
-            a {
-                // padding: 13px 15px;
-                // text-align: left;
-                font-size: $fontsizeForHeader;
-                font-weight: normal;
-            }
-        }
-     }
- }
-
     .buttonToPost {
         background: $totallyTransparent;
         text-align: center;
@@ -170,4 +174,211 @@
             border-radius: 30px;
             font-size: 1.1em;
         }
+ }
+
+ @media screen and (max-width: 900px) {
+     body {
+         background: red;
+         .gridContainer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 120px minmax(300px, auto);
+            align-items: center;
+        
+            .header {
+               display: none;
+            }
+
+            .headerHamburgerMenu {
+                display: initial;
+                grid-column: 1 / 4;
+                position: sticky;
+                top: 0;
+                width: 100%;
+                background-color: $ColorWithTransparency;
+
+                ul {
+                    .sortPd {
+                        .sortPulldown {
+                            padding: 5px 15px;
+                            margin-bottom: 10px;
+                            border-radius: 10px;
+                            color: gray;
+                        }
+                    }
+
+                    .filterPd {
+                        .filterPulldown {
+                            padding: 5px 15px;
+                            border-radius: 10px;
+                            color: gray;
+                        }
+                    }
+
+                }
+               .createHamburgerMenu {
+                   margin: 0 auto;
+                
+                   .nav-hidden {
+                       display: none;
+                   }
+                
+                   #menubtn {
+                       width: 100%;
+                       
+                       img {
+                           width: 5%;
+                           height: 5%;
+                           float: right;
+                       }
+                   }
+
+                   nav {
+                       background: skyblue;
+                       display: none;
+                       float: right;
+                   }
+
+                   #nav-input:checked ~ nav {
+                       display: block;
+                       animation: 1s fadeIn;
+
+                       @keyframes fadeIn {
+                           from {
+                               opacity: 0; 
+                           }
+                           to {
+                               opacity: 1;
+                           }
+                       }
+                   }
+               }
+            }
+        
+            .containerGridPictures {
+               grid-column: 1 / 3;
+               display: grid; 
+               grid-template-columns: repeat(2, 1fr);
+            }
+        
+            .boardForPhotos {
+                background: linear-gradient(135deg, #fff2e6, #ffe5cc);
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border-radius: 5%;
+                margin: 5%;
+                padding-top: 2%;
+                padding-bottom: 5%;
+            
+                figcaption {
+                    align-self: flex-start;
+                    padding-left: 10%;
+                    font-size: .85em;
+                }
+        
+                img {
+                    width: 80%;
+                    height: 80%;
+                    padding-top: 1%;
+                    object-fit: cover;
+                }
+            }
+        }
+     }
+ }
+
+ @media screen and (max-width: 600px) {
+    body {
+        background: greenyellow;
+        .gridContainer {
+           display: grid;
+           grid-template-columns: 1fr;
+           grid-template-rows: 100px minmax(300px, auto);
+           align-items: center;
+       
+           .header {
+              display: none;
+           }
+
+           .headerHamburgerMenu {
+               display: initial;
+               grid-column: 1 / 4;
+               position: sticky;
+               top: 0;
+               width: 100%;
+               background-color: $ColorWithTransparency;
+
+              .createHamburgerMenu {
+                  margin: 0 auto;
+               
+                  .nav-hidden {
+                      display: none;
+                  }
+               
+                  #menubtn {
+                      width: 100%;
+                      
+                      img {
+                          width: 5%;
+                          height: 5%;
+                          float: right;
+                      }
+                  }
+
+                  nav {
+                      background: skyblue;
+                      display: none;
+                      float: right;
+                  }
+
+                  #nav-input:checked ~ nav {
+                      display: block;
+                      animation: 1s fadeIn;
+
+                      @keyframes fadeIn {
+                          from {
+                              opacity: 0; 
+                          }
+                          to {
+                              opacity: 1;
+                          }
+                      }
+                  }
+              }
+           }
+       
+           .containerGridPictures {
+              grid-column: 1 / 2;
+              display: grid; 
+              grid-template-columns: 1fr;
+           }
+       
+           .boardForPhotos {
+               background: linear-gradient(135deg, #fff2e6, #ffe5cc);
+               align-items: center;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               border-radius: 5%;
+               margin: 5%;
+               padding-top: 2%;
+               padding-bottom: 5%;
+           
+               figcaption {
+                   align-self: flex-start;
+                   padding-left: 10%;
+                   font-size: .85em;
+               }
+       
+               img {
+                   width: 80%;
+                   height: 80%;
+                   padding-top: 1%;
+                   object-fit: cover;
+               }
+           }
+       }
+    }
  }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./scss/browsePhoto.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <title>Miyabi's photos</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -12,140 +13,397 @@
             //create the fake data
             var allPicture = [ // all categories
                 {
-                    data: "June 27th, 2020",
+                    data: "November 24th, 2020",
+                    category: "Nature",
+                    image: "img/mountInFukui.jpg"
+                },
+                {
+                    data: "November 18th, 2020",
+                    category: "Nature",
+                    image: "img/mapleLeaves.jpg"
+                },
+                {
+                    data: "November 18th, 2020",
+                    category: "Nature",
+                    image: "img/mapleLeaves2.jpg"
+                },
+                {
+                    data: "November 3rd, 2020",
                     category: "People",
-                    image: "img/montreal.jpg"
+                    image: "img/atIzakaya.jpg"
+                },
+                {
+                    data: "October 12th, 2020",
+                    category: "Food",
+                    image: "img/avocado.jpg"
+                },
+                {
+                    data: "October 10th, 2020",
+                    category: "Nature",
+                    image: "img/sky.jpg"
+                },
+                {
+                    data: "September 18th, 2020",
+                    category: "Nature",
+                    image: "img/noto.jpg"
+                },
+                {
+                    data: "September 6th, 2020",
+                    category: "Food",
+                    image: "img/ramen.jpg"
+                },
+                {
+                    data: "August 5th, 2020",
+                    category: "Nature",
+                    image: "img/seaInNoto.jpg"
+                },
+                {
+                    data: "August 5th, 2020",
+                    category: "People",
+                    image: "img/canadians.jpg"
+                },
+                {
+                    data: "August 1st, 2020",
+                    category: "Nature",
+                    image: "img/sunFlowers.jpg"
                 },
                 {
                     data: "June 27th, 2020",
                     category: "Food",
-                    image: "img/montreal.jpg"
+                    image: "img/sentokun.jpg"
                 },
                 {
-                    data: "June 27th, 2020",
+                    data: "June 22nd, 2020",
                     category: "People",
-                    image: "img/montreal.jpg"
+                    image: "img/tetsubou.jpg"
                 },
                 {
-                    data: "June 27th, 2023",
-                    category: "Nature",
-                    image: "img/montreal.jpg"
-                },
-                {
-                    data: "June 27th, 2020",
-                    category: "Nature",
-                    image: "img/montreal.jpg"
-                },
-                {
-                    data: "June 27th, 2020",
+                    data: "May 27th, 2020",
                     category: "People",
-                    image: "img/montreal.jpg"
+                    image: "img/funNight.jpg"
                 },
                 {
-                    data: "June 27th, 2020",
+                    data: "May 27th, 2020",
+                    category: "People",
+                    image: "img/funNight2.jpg"
+                },
+
+                {
+                    data: "May 27th, 2020",
+                    category: "People",
+                    image: "img/cheers.jpg"
+                },
+                {
+                    data: "May 14th, 2020",
+                    category: "Food",
+                    image: "img/cakeForMySis.jpg"
+                },
+                {
+                    data: "May 14th, 2020",
+                    category: "Food",
+                    image: "img/takoyaki.jpg"
+                },
+                {
+                    data: "May 14th, 2020",
+                    category: "People",
+                    image: "img/myFamily2.jpg"
+                },
+                {   
+                    data: "May 14th, 2020",
+                    category: "Food",
+                    image: "img/paella.jpg"
+                },
+                {
+                    data: "March 1st, 2020",
+                    category: "People",
+                    image: "img/beforeThePandemic2.jpg"
+                },
+                {
+                    data: "Febrary 26th, 2020",
+                    category: "People",
+                    image: "img/peopleILove3.jpg"
+                },
+                {
+                    data: "Febrary 26th, 2020",
+                    category: "Food",
+                    image: "img/koreanFood.jpg"
+                },
+                {
+                    data: "January 2nd, 2020",
+                    category: "Food",
+                    image: "img/bugs.jpg"
+                },
+                {
+                    data: "September 13th, 2019",
                     category: "Nature",
-                    image: "img/montreal.jpg"
+                    image: "img/tottoriSakyu.jpg"
                 },
                 {
-                    data: "June 27th, 2020",
-                    category: "Food",
-                    image: "img/montreal.jpg"
+                    data: "August 10th, 2019",
+                    category: "Nature",
+                    image: "img/sunsetInSingapore.jpg"
                 },
                 {
-                    data: "June 27th, 2020",
+                    data: "July 20th, 2019",
+                    category: "People",
+                    image: "img/trumpet2.jpg"
+                },
+                {
+                    data: "June 27th, 2019",
+                    category: "Nature",
+                    image: "img/hydrangea.jpg"
+                },
+                {
+                    data: "June 27th, 2019",
+                    category: "Nature",
+                    image: "img/hydrangea2.jpg"
+                },
+                {
+                    data: "June 15th, 2019",
+                    category: "People",
+                    image: "img/havingFun.jpg"
+                },
+                {
+                    data: "June 15th, 2019",
+                    category: "People",
+                    image: "img/karaoke.jpg"
+                },
+                {
+                    data: "May 4th, 2019",
+                    category: "Nature",
+                    image: "img/tulips.jpg"
+                },
+                {
+                    data: "April 30th, 2019",
+                    category: "People",
+                    image: "img/yuyuAndharu.jpg"
+                },
+                {
+                    data: "April 30th, 2019",
+                    category: "Nature",
+                    image: "img/sea2.jpg"
+                },
+                {
+                    data: "April 30th, 2019",
+                    category: "Nature",
+                    image: "img/fish.jpg"
+                },
+                {   
+                    data: "April 29th, 2019",
+                    category: "Nature",
+                    image: "img/seaInPhilipines.jpg"
+                },
+                {
+                    data: "January 28th, 2019",
+                    category: "People",
+                    image: "img/sochan.jpg"
+                },
+                {   
+                    data: "January 27th, 2019",
+                    category: "People",
+                    image: "img/peopleILove.jpg"
+                },
+                {
+                    data: "January 7th, 2018",
                     category: "Food",
-                    image: "img/montreal.jpg"
-                }   
+                    image: "img/soupDumplings.jpg"
+                },
             ]
 
             //Create array for people fake data
 
             var people = [
+               
+                {
+                    data: "May 27th, 2020",
+                    category: "People",
+                    image: "img/cheers.jpg"
+                },
+                {
+                    data: "May 27th, 2020",
+                    category: "People",
+                    image: "img/funNight.jpg"
+                },
+                {
+                    data: "May 27th, 2020",
+                    category: "People",
+                    image: "img/funNight2.jpg"
+                },
+                {
+                    data: "May 14th, 2020",
+                    category: "People",
+                    image: "img/myFamily2.jpg"
+                },
+                {
+                    data: "March 1st, 2020",
+                    category: "People",
+                    image: "img/beforeThePandemic2.jpg"
+                },
+                {
+                    data: "Febrary 26th, 2020",
+                    category: "People",
+                    image: "img/peopleILove3.jpg"
+                },
+                {
+                    data: "July 20th, 2019",
+                    category: "People",
+                    image: "img/trumpet2.jpg"
+                },
+                {
+                    data: "June 15th, 2019",
+                    category: "People",
+                    image: "img/havingFun.jpg"
+                },
+                {
+                    data: "June 15th, 2019",
+                    category: "People",
+                    image: "img/karaoke.jpg"
+                },
+                {
+                    data: "April 30th, 2019",
+                    category: "People",
+                    image: "img/yuyuAndharu.jpg"
+                },
+                {
+                    data: "January 28th, 2019",
+                    category: "People",
+                    image: "img/sochan.jpg"
+                },
                 {   
-                    data: "June 27th, 2020",
+                    data: "January 27th, 2019",
                     category: "People",
-                    image: "img/montreal.jpg"
+                    image: "img/peopleILove.jpg"
                 },
-                {
-                    data: "June 27th, 2020",
-                    category: "People",
-                    image: "img/montreal.jpg"
-                }
-                ,{
-                    data: "June 27th, 2020",
-                    category: "People",
-                    image: "img/montreal.jpg"
-                },
-                {
-                    data: "June 27th, 2020",
-                    category: "People",
-                    image: "img/montreal.jpg"
-                },
-                {
-                    data: "June 27th, 2020",
-                    category: "People",
-                    image: "img/montreal.jpg"
-                }
             ]
 
             //Create array for food fake data
 
             var food = [
-                {   
+                {
+                    data: "October 12th, 2020",
+                    category: "Food",
+                    image: "img/avocado.jpg"
+                },
+                {
+                    data: "September 6th, 2020",
+                    category: "Food",
+                    image: "img/ramen.jpg"
+                },
+                {
                     data: "June 27th, 2020",
+                    category: "Food",
+                    image: "img/sentokun.jpg"
+                },
+                {   
+                    data: "May 14th, 2020",
                     category: "Food",
                     image: "img/paella.jpg"
                 },
                 {
-                    data: "June 27th, 2020",
+                    data: "May 14th, 2020",
                     category: "Food",
-                    image: "img/montreal.jpg"
-                }
-                ,{
-                    data: "June 27th, 2020",
-                    category: "Food",
-                    image: "img/montreal.jpg"
+                    image: "img/takoyaki.jpg"
                 },
                 {
-                    data: "June 27th, 2020",
+                    data: "May 14th, 2020",
                     category: "Food",
-                    image: "img/montreal.jpg"
+                    image: "img/cakeForMySis.jpg"
                 },
                 {
-                    data: "June 27th, 2020",
+                    data: "Febrary 26th, 2020",
                     category: "Food",
-                    image: "img/montreal.jpg"
-                }
+                    image: "img/koreanFood.jpg"
+                },
+                {
+                    data: "January 2nd, 2020",
+                    category: "Food",
+                    image: "img/bugs.jpg"
+                },
+                {
+                    data: "January 7th, 2018",
+                    category: "Food",
+                    image: "img/soupDumplings.jpg"
+                },
             ]
 
             //Create array for Nature fake data
 
             var nature = [
+                {
+                    data: "November 24th, 2020",
+                    category: "Nature",
+                    image: "img/mountInFukui.jpg"
+                },
+                {
+                    data: "November 18th, 2020",
+                    category: "Nature",
+                    image: "img/mapleLeaves.jpg"
+                },
+                {
+                    data: "November 18th, 2020",
+                    category: "Nature",
+                    image: "img/mapleLeaves2.jpg"
+                },
+                {
+                    data: "October 10th, 2020",
+                    category: "Nature",
+                    image: "img/sky.jpg"
+                },
+                {
+                    data: "September 18th, 2020",
+                    category: "Nature",
+                    image: "img/noto.jpg"
+                },
+                {
+                    data: "September 13th, 2020",
+                    category: "Nature",
+                    image: "img/tottoriSakyu.jpg"
+                },
+                {
+                    data: "August 10th, 2019",
+                    category: "Nature",
+                    image: "img/sunsetInSingapore.jpg"
+                },
+                {
+                    data: "August 5th, 2020",
+                    category: "Nature",
+                    image: "img/seaInNoto.jpg"
+                },
+                {
+                    data: "August 1st, 2020",
+                    category: "Nature",
+                    image: "img/sunFlowers.jpg"
+                },
+                {
+                    data: "June 27th, 2019",
+                    category: "Nature",
+                    image: "img/hydrangea.jpg"
+                },
+                {
+                    data: "June 27th, 2019",
+                    category: "Nature",
+                    image: "img/hydrangea2.jpg"
+                },
+                {
+                    data: "May 4th, 2019",
+                    category: "Nature",
+                    image: "img/tulips.jpg"
+                },
+                {
+                    data: "April 30th, 2019",
+                    category: "Nature",
+                    image: "img/sea2.jpg"
+                },
+                {
+                    data: "April 30th, 2019",
+                    category: "Nature",
+                    image: "img/fish.jpg"
+                },
                 {   
-                    data: "June 27th, 2020",
+                    data: "April 29th, 2019",
                     category: "Nature",
-                    image: "img/montreal.jpg"
+                    image: "img/seaInPhilipines.jpg"
                 },
-                {
-                    data: "June 27th, 2020",
-                    category: "Nature",
-                    image: "img/montreal.jpg"
-                }
-                ,{
-                    data: "June 27th, 2020",
-                    category: "Nature",
-                    image: "img/montreal.jpg"
-                },
-                {
-                    data: "June 27th, 2020",
-                    category: "Nature",
-                    image: "img/montreal.jpg"
-                },
-                {
-                    data: "June 27th, 2020",
-                    category: "Nature",
-                    image: "img/montreal.jpg"
-                }
             ]
 
             //create the function and build the page
@@ -153,11 +411,11 @@
             function CreateThePage(arr) {
                 var wrap = $(".containerGridPictures") // select the element that we will append the pictures 
                 for(i=0; i< arr.length; i++){
-                    wrap.append("<figure class='boardForPhotos'><figcaption> Data: " + arr[i].data + "</figcaption> <figcaption> Category: " + arr[i].category + "</figcaption><img src=" + arr[i].image + " />");
+                    wrap.append("<figure class='boardForPhotos'><figcaption> Date: " + arr[i].data + "</figcaption> <figcaption> Category: " + arr[i].category + "</figcaption><img src=" + arr[i].image + " />");
                 }
             }
 
-            
+        
             //Create the page with all pictures
             CreateThePage(allPicture);
             
@@ -179,7 +437,6 @@
               }
             })
         })
-
     </script>
 </head>
 
@@ -189,7 +446,6 @@
             <ul class="gridContainerForHeader">
                 <li class="sortPd">
                     <select class="sortPulldown" name="sort" id="sort">
-                        <option value="sortThePhotos">Sort the photos</option>
                         <option value="newToOld">New to old</option>
                         <option value="oldTONew">Old to new</option>
                     </select>
@@ -213,8 +469,43 @@
                 </li>
             </ul>
         </nav>
-        <div class="containerGridPictures">
-
+        <nav class="headerHamburgerMenu">
+            <ul>
+                <li class="sortPd">
+                    <select class="sortPulldown" name="sort" id="sort">
+                        <option value="newToOld">New to old</option>
+                        <option value="oldTONew">Old to new</option>
+                    </select>
+                </li>
+                <li class="filterPd">
+                    <select class="filterPulldown" name="filter" id="filter">
+                        <option value="all">All photos</option>
+                        <option value="people">People</option>
+                        <option value="nature">Nature</option>
+                        <option value="food">Food</option>
+                    </select>
+                </li>
+            </ul>
+            <div class="createHamburgerMenu">
+                <input id="nav-input" type="checkbox" class="nav-hidden">
+                <label id="menubtn" for="nav-input"><img src="./img/hamburgerMenu.png.crdownload" alt="hamburgerMenu"></label>
+                <nav>
+                    <ul>
+                        <li class="miyasPhoto"><a href="./browsePhoto.html">Miyabi's photos</a></li>
+                        <li class="links"><a href="#">Links</a></li>
+                        <li class="profile">
+                            <a href="./profile.html">Miyabi</a>
+                            <ul class="dropDownMenu">
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+        <div class="containerGridPictures">  
+            
         </div>
             <!-- <figure class="boardForPhotos">
                 <figcaption >Date: June 27th, 2020</figcaption>

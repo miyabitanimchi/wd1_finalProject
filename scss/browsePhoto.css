@@ -21,7 +21,7 @@ li {
           align-items: center;
 }
 
-.gridContainer nav {
+.gridContainer .header {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1 / 4;
@@ -30,6 +30,136 @@ li {
   top: 0;
   width: 100%;
   background-color: rgba(255, 248, 193, 0.7);
+}
+
+.gridContainer .header .gridContainerForHeader {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+.gridContainer .header .gridContainerForHeader .sortPd {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.gridContainer .header .gridContainerForHeader .sortPd .sortPulldown {
+  padding: 5px 15px;
+  border-radius: 10px;
+  color: gray;
+}
+
+.gridContainer .header .gridContainerForHeader .filterPd {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+.gridContainer .header .gridContainerForHeader .filterPd .filterPulldown {
+  padding: 5px 15px;
+  border-radius: 10px;
+  color: gray;
+}
+
+.gridContainer .header .gridContainerForHeader .miyasPhoto {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 2;
+  grid-column: 9 / 11;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0;
+}
+
+.gridContainer .header .gridContainerForHeader .miyasPhoto a {
+  display: block;
+  margin: 0;
+  padding: 13px 0;
+  color: gray;
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.gridContainer .header .gridContainerForHeader .links {
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 1;
+  grid-column: 11 / 12;
+  font-size: 1.1em;
+}
+
+.gridContainer .header .gridContainerForHeader .links a {
+  display: block;
+  margin: 0;
+  padding: 13px 0;
+  color: gray;
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.gridContainer .header .gridContainerForHeader .profile {
+  -ms-grid-column: 12;
+  -ms-grid-column-span: 1;
+  grid-column: 12 / 13;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.gridContainer .header .gridContainerForHeader .profile:hover .dropDownMenu li {
+  overflow: visible;
+  height: 38px;
+  border-bottom: 1px solid #fff;
+}
+
+.gridContainer .header .gridContainerForHeader .profile a {
+  display: block;
+  margin: 0;
+  padding: 13px 0;
+  color: gray;
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.gridContainer .header .gridContainerForHeader .profile .dropDownMenu {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.gridContainer .header .gridContainerForHeader .profile .dropDownMenu li {
+  overflow: hidden;
+  width: 200%;
+  height: 0;
+  color: gray;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.gridContainer .header .gridContainerForHeader .profile .dropDownMenu a {
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+.gridContainer .headerHamburgerMenu {
+  display: none;
+}
+
+.gridContainer .containerGridPictures {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }
 
 .gridContainer .boardForPhotos {
@@ -68,126 +198,6 @@ li {
      object-fit: cover;
 }
 
-.gridContainerForHeader {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
-}
-
-.gridContainerForHeader .sortPd {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-}
-
-.gridContainerForHeader .sortPd .sortPulldown {
-  padding: 5px 15px;
-  border-radius: 10px;
-  color: gray;
-}
-
-.gridContainerForHeader .filterPd {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3 / 4;
-}
-
-.gridContainerForHeader .filterPd .filterPulldown {
-  padding: 5px 15px;
-  border-radius: 10px;
-  color: gray;
-}
-
-.gridContainerForHeader .filterPd .filterPulldown option {
-  background-color: lightcoral;
-}
-
-.gridContainerForHeader .miyasPhoto {
-  -ms-grid-column: 9;
-  -ms-grid-column-span: 2;
-  grid-column: 9 / 11;
-  font-size: 1.1em;
-  margin: 0;
-  padding: 0;
-}
-
-.gridContainerForHeader .miyasPhoto a {
-  display: block;
-  margin: 0;
-  padding: 13px 0;
-  color: gray;
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 1;
-  text-decoration: none;
-}
-
-.gridContainerForHeader .links {
-  -ms-grid-column: 11;
-  -ms-grid-column-span: 1;
-  grid-column: 11 / 12;
-  font-size: 1.1em;
-}
-
-.gridContainerForHeader .links a {
-  display: block;
-  margin: 0;
-  padding: 13px 0;
-  color: gray;
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 1;
-  text-decoration: none;
-}
-
-.gridContainerForHeader .profile {
-  -ms-grid-column: 12;
-  -ms-grid-column-span: 1;
-  grid-column: 12 / 13;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-
-.gridContainerForHeader .profile:hover .dropDownMenu li {
-  overflow: visible;
-  height: 38px;
-  border-bottom: 1px solid #fff;
-}
-
-.gridContainerForHeader .profile a {
-  display: block;
-  margin: 0;
-  padding: 13px 0;
-  color: gray;
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 1;
-  text-decoration: none;
-}
-
-.gridContainerForHeader .profile .dropDownMenu {
-  position: absolute;
-  left: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.gridContainerForHeader .profile .dropDownMenu li {
-  overflow: hidden;
-  width: 200%;
-  height: 0;
-  color: gray;
-  -webkit-transition: .2s;
-  transition: .2s;
-}
-
-.gridContainerForHeader .profile .dropDownMenu a {
-  font-size: 1.1em;
-  font-weight: normal;
-}
-
 .buttonToPost {
   background: rgba(255, 255, 255, 0);
   text-align: center;
@@ -207,5 +217,242 @@ li {
   padding: 15px 50px;
   border-radius: 30px;
   font-size: 1.1em;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    background: red;
+  }
+  body .gridContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 120px minmax(300px, auto);
+        grid-template-rows: 120px minmax(300px, auto);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .gridContainer .header {
+    display: none;
+  }
+  body .gridContainer .headerHamburgerMenu {
+    display: initial;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 248, 193, 0.7);
+  }
+  body .gridContainer .headerHamburgerMenu ul .sortPd .sortPulldown {
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: gray;
+  }
+  body .gridContainer .headerHamburgerMenu ul .filterPd .filterPulldown {
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: gray;
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu {
+    margin: 0 auto;
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu .nav-hidden {
+    display: none;
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu #menubtn {
+    width: 100%;
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu #menubtn img {
+    width: 5%;
+    height: 5%;
+    float: right;
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav {
+    background: skyblue;
+    display: none;
+    float: right;
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu #nav-input:checked ~ nav {
+    display: block;
+    -webkit-animation: 1s fadeIn;
+            animation: 1s fadeIn;
+  }
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  body .gridContainer .containerGridPictures {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  body .gridContainer .boardForPhotos {
+    background: linear-gradient(135deg, #fff2e6, #ffe5cc);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 5%;
+    margin: 5%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+  }
+  body .gridContainer .boardForPhotos figcaption {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding-left: 10%;
+    font-size: .85em;
+  }
+  body .gridContainer .boardForPhotos img {
+    width: 80%;
+    height: 80%;
+    padding-top: 1%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background: greenyellow;
+  }
+  body .gridContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 100px minmax(300px, auto);
+        grid-template-rows: 100px minmax(300px, auto);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .gridContainer .header {
+    display: none;
+  }
+  body .gridContainer .headerHamburgerMenu {
+    display: initial;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 248, 193, 0.7);
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu {
+    margin: 0 auto;
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu .nav-hidden {
+    display: none;
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu #menubtn {
+    width: 100%;
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu #menubtn img {
+    width: 5%;
+    height: 5%;
+    float: right;
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav {
+    background: skyblue;
+    display: none;
+    float: right;
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu #nav-input:checked ~ nav {
+    display: block;
+    -webkit-animation: 1s fadeIn;
+            animation: 1s fadeIn;
+  }
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  body .gridContainer .containerGridPictures {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body .gridContainer .boardForPhotos {
+    background: linear-gradient(135deg, #fff2e6, #ffe5cc);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 5%;
+    margin: 5%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+  }
+  body .gridContainer .boardForPhotos figcaption {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding-left: 10%;
+    font-size: .85em;
+  }
+  body .gridContainer .boardForPhotos img {
+    width: 80%;
+    height: 80%;
+    padding-top: 1%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 /*# sourceMappingURL=browsePhoto.css.map */
