@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff8c1;
+}
+
+li {
+  list-style: none;
+}
+
+.gridForDescri {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.gridForDescri .photoDescription {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.gridForDescri .photoDescription img {
+  height: 400px;
+  width: 600px;
+}
+
+.gridForDescri .descriPart {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+/*# sourceMappingURL=photoDescri.css.map */

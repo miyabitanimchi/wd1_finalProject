@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+@import url(/Users/miyabi/Desktop/finalProject/scss/start.css);
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff8c1;
+}
+
+li {
+  list-style: none;
+}
+
+.gridForProfile {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: 100px minmax(300px, auto);
+      grid-template-rows: 100px minmax(300px, auto);
+}
+
+.gridForProfile nav {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 11;
+  grid-column: 1 / 12;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 248, 193, 0.7);
+}
+
+.gridForProfile nav .gridContainerForHeader {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+.gridForProfile nav .gridContainerForHeader .miyasPhoto {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 2;
+  grid-column: 9 / 11;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0;
+}
+
+.gridForProfile nav .gridContainerForHeader .miyasPhoto a {
+  display: block;
+  margin: 0;
+  padding: 13px 0;
+  color: gray;
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.gridForProfile nav .gridContainerForHeader .links {
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 1;
+  grid-column: 11 / 12;
+  font-size: 1.1em;
+}
+
+.gridForProfile nav .gridContainerForHeader .links a {
+  display: block;
+  margin: 0;
+  padding: 13px 0;
+  color: gray;
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.gridForProfile nav .gridContainerForHeader .profile {
+  -ms-grid-column: 12;
+  -ms-grid-column-span: 1;
+  grid-column: 12 / 13;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.gridForProfile nav .gridContainerForHeader .profile:hover .dropDownMenu li {
+  overflow: visible;
+  height: 38px;
+  border-bottom: 1px solid #fff;
+}
+
+.gridForProfile nav .gridContainerForHeader .profile a {
+  display: block;
+  margin: 0;
+  padding: 13px 0;
+  color: gray;
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.gridForProfile nav .gridContainerForHeader .profile .dropDownMenu {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.gridForProfile nav .gridContainerForHeader .profile .dropDownMenu li {
+  overflow: hidden;
+  width: 200%;
+  height: 0;
+  color: gray;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.gridForProfile nav .gridContainerForHeader .profile .dropDownMenu a {
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+.gridForProfile .profilePhoto {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1 / 7;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: minmax(200px, auto);
+      grid-template-rows: minmax(200px, auto);
+}
+
+.gridForProfile .profilePhoto .flashForCamera {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2 / 5;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 6;
+  grid-row: 4 / 10;
+  position: relative;
+}
+
+.gridForProfile .profilePhoto .flashForCamera .flash {
+  background: #fcd307;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  text-align: center;
+}
+
+.gridForProfile .profilePhoto .flashForCamera .flash::before, .gridForProfile .profilePhoto .flashForCamera .flash::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400px;
+  width: 400px;
+  background: #fcd307;
+}
+
+.gridForProfile .profilePhoto .flashForCamera .flash::before {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.gridForProfile .profilePhoto .flashForCamera .flash::after {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+.gridForProfile .profilePhoto .flashForCamera .profileImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gridForProfile .profilePhoto .flashForCamera .profileImg img {
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  height: 400px;
+  width: 400px;
+}
+
+.gridForProfile .profile {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 6;
+  grid-column: 7 / 13;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
+.gridForProfile .profile h1 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2 / 6;
+  padding-top: 25%;
+}
+
+.gridForProfile .profile .joinWhen {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2 / 6;
+}
+
+.gridForProfile .profile .liveWhere {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2 / 6;
+}
+
+.gridForProfile .profile p {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2 / 6;
+}
+/*# sourceMappingURL=profile.css.map */

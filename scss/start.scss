@@ -1,0 +1,174 @@
+@import './common';
+@import './style';
+
+.makeSomeAnimation {
+    h1 {
+        text-align: center;
+    }
+
+    .clutteredWithPhotos {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        padding-top: 500px;
+
+        .utsurundesu {
+            position: absolute;
+            top: -15%;
+            left: -27%;
+            transform-origin: bottom right;
+            transform: rotate(25deg);
+        }
+
+        .flashForCamera {
+            position: absolute;
+            top: -25%;
+            left: 13%;
+            
+
+            .flash {
+                background: $flash;
+                width: 100px;
+                height: 100px;
+                position: relative;
+                text-align: center;
+            
+                &::before,
+                &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100px;
+                width: 100px;
+                background: $flash;
+                }
+            
+                &::before {
+                transform: rotate(30deg);
+                }
+            
+                &::after {
+                transform: rotate(60deg);
+                }
+            }
+        }
+
+        .paella {
+            @include makeItCluttered(absolute);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-10deg);
+            transform-origin: 0 0;
+        }
+
+        .pplILove {
+            @include makeItCluttered(absolute);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(10deg);
+            transform-origin: 0 0;
+        }
+
+        .running {
+            @include makeItCluttered(absolute);
+            top: 50%;
+            left: 50%;
+            transform: translate(-40%, -40%) rotate(3deg);
+            transform-origin: 0 0;
+        }
+
+        .sunsetInSg {
+            @include makeItCluttered(absolute);
+            top: 50%;
+            left: 50%;
+            transform: translate(-70%, -70%) rotate(-21deg);
+            transform-origin: bottom right;
+        }
+
+        .karaoke {
+            @include makeItCluttered(absolute);
+            top: 50%;
+            left: 50%;
+            transform: translate(-20%, -20%) rotate(7deg);
+            transform-origin: bottom right;
+        }
+
+        .marlion {
+            @include makeItCluttered(absolute);
+            top: 51%;
+            left: 40%;
+            transform: rotate(-4deg);
+            transform-origin: bottom right;
+        }
+
+        .noto {
+            @include makeItCluttered(absolute);
+            top: 49%;
+            left: 38%;
+            transform: rotate(-7deg);
+            transform-origin: bottom right;
+        }
+
+        .goodFriends {
+            @include makeItCluttered(absolute);
+            top: 52%;
+            left: 23%;
+            transform: rotate(-7deg);
+            transform-origin: bottom right;
+        }
+
+        .autumn {
+            @include makeItCluttered(absolute);
+            top: 50%;
+            left: 43%;
+            transform: rotate(23deg);
+            transform-origin: bottom right;
+        }
+
+        .cheers {
+            @include makeItCluttered(absolute);
+            top: 50%;
+            left: 50%;
+            transform: translate(-53%, -53%) rotate(-8deg);
+            transform-origin: bottom right;
+        }
+
+        .hydrangea {
+            @include makeItCluttered(absolute);
+            top: 50%;
+            left: 60%;
+            transform: translate(-53%, -53%) rotate(12deg);
+            transform-origin: bottom right;
+        }
+
+        .giraffe {
+            @include makeItCluttered(absolute);
+            top: 57%;
+            left: 39%;
+            transform: rotate(3deg);
+            transform-origin: bottom right;
+        }
+
+        .blueSky {
+            @include makeItCluttered(absolute);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(5deg);
+            transform-origin: bottom right;
+        }
+
+        .toStart {
+           position: absolute;
+           top: 53%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           background: linear-gradient(to right, #ed213a, #93291e);
+           color: #ffeadb;
+           font-family: $fontFamily;
+           padding: 15px 50px;
+           border-radius: 30px;
+           font-size: 1.1em;
+        }
+    }
+}

@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff8c1;
+}
+
+li {
+  list-style: none;
+}
+
+.gridContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 100px minmax(300px, auto);
+      grid-template-rows: 100px minmax(300px, auto);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gridContainer nav {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 248, 193, 0.7);
+}
+
+.gridContainer .boardForPhotos {
+  background: linear-gradient(135deg, #fff2e6, #ffe5cc);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5%;
+  margin: 5%;
+  padding-top: 2%;
+  padding-bottom: 5%;
+}
+
+.gridContainer .boardForPhotos figcaption {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-left: 10%;
+  font-size: .85em;
+}
+
+.gridContainer .boardForPhotos img {
+  width: 80%;
+  height: 80%;
+  padding-top: 1%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gridContainerForHeader {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+.gridContainerForHeader .sortPd {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.gridContainerForHeader .sortPd .sortPulldown {
+  padding: 5px 15px;
+  border-radius: 10px;
+  color: gray;
+}
+
+.gridContainerForHeader .filterPd {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+.gridContainerForHeader .filterPd .filterPulldown {
+  padding: 5px 15px;
+  border-radius: 10px;
+  color: gray;
+}
+
+.gridContainerForHeader .filterPd .filterPulldown option {
+  background-color: lightcoral;
+}
+
+.gridContainerForHeader .miyasPhoto {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 2;
+  grid-column: 9 / 11;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0;
+}
+
+.gridContainerForHeader .miyasPhoto a {
+  display: block;
+  margin: 0;
+  padding: 13px 0;
+  color: gray;
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.gridContainerForHeader .links {
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 1;
+  grid-column: 11 / 12;
+  font-size: 1.1em;
+}
+
+.gridContainerForHeader .links a {
+  display: block;
+  margin: 0;
+  padding: 13px 0;
+  color: gray;
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.gridContainerForHeader .profile {
+  -ms-grid-column: 12;
+  -ms-grid-column-span: 1;
+  grid-column: 12 / 13;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.gridContainerForHeader .profile:hover .dropDownMenu li {
+  overflow: visible;
+  height: 38px;
+  border-bottom: 1px solid #fff;
+}
+
+.gridContainerForHeader .profile a {
+  display: block;
+  margin: 0;
+  padding: 13px 0;
+  color: gray;
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.gridContainerForHeader .profile .dropDownMenu {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.gridContainerForHeader .profile .dropDownMenu li {
+  overflow: hidden;
+  width: 200%;
+  height: 0;
+  color: gray;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.gridContainerForHeader .profile .dropDownMenu a {
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+.buttonToPost {
+  background: rgba(255, 255, 255, 0);
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.buttonToPost .postButton {
+  background: -webkit-gradient(linear, left top, right top, from(#ed213a), to(#93291e));
+  background: linear-gradient(to right, #ed213a, #93291e);
+  color: #ffeadb;
+  font-family: "Potta One", cursive;
+  padding: 15px 50px;
+  border-radius: 30px;
+  font-size: 1.1em;
+}
+/*# sourceMappingURL=browsePhoto.css.map */

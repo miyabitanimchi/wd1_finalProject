@@ -1,0 +1,18 @@
+//color
+$backgroundColor: #fff8c1;
+$ColorWithTransparency: rgba(255, 248, 193, .7);
+$totallyTransparent: rgba(255, 255, 255, 0);
+$flash: #fcd307;
+
+
+
+//font
+$fontsizeForHeader: 1.1em;
+$fontFamily: 'Potta One', cursive;
+
+//cluttered with photos
+@mixin makeItCluttered($absolute) {
+    position: $absolute;
+    height: 300px;
+    width: 450px;
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/browsePhoto.css">
+    <title>Miyabi's photos</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){ // Wait until the browser finish to read the html and then read the script
+            //create the fake data
+            var allPicture = [ // all categories
+                {
+                    data: "June 27th, 2020",
+                    category: "People",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "Food",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "People",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2023",
+                    category: "Nature",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "Nature",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "People",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "Nature",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "Food",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "Food",
+                    image: "img/montreal.jpg"
+                }   
+            ]
+
+            //Create array for people fake data
+
+            var people = [
+                {   
+                    data: "June 27th, 2020",
+                    category: "People",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "People",
+                    image: "img/montreal.jpg"
+                }
+                ,{
+                    data: "June 27th, 2020",
+                    category: "People",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "People",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "People",
+                    image: "img/montreal.jpg"
+                }
+            ]
+
+            //Create array for food fake data
+
+            var food = [
+                {   
+                    data: "June 27th, 2020",
+                    category: "Food",
+                    image: "img/paella.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "Food",
+                    image: "img/montreal.jpg"
+                }
+                ,{
+                    data: "June 27th, 2020",
+                    category: "Food",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "Food",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "Food",
+                    image: "img/montreal.jpg"
+                }
+            ]
+
+            //Create array for Nature fake data
+
+            var nature = [
+                {   
+                    data: "June 27th, 2020",
+                    category: "Nature",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "Nature",
+                    image: "img/montreal.jpg"
+                }
+                ,{
+                    data: "June 27th, 2020",
+                    category: "Nature",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "Nature",
+                    image: "img/montreal.jpg"
+                },
+                {
+                    data: "June 27th, 2020",
+                    category: "Nature",
+                    image: "img/montreal.jpg"
+                }
+            ]
+
+            //create the function and build the page
+
+            function CreateThePage(arr) {
+                var wrap = $(".containerGridPictures") // select the element that we will append the pictures 
+                for(i=0; i< arr.length; i++){
+                    wrap.append("<figure class='boardForPhotos'><figcaption> Data: " + arr[i].data + "</figcaption> <figcaption> Category: " + arr[i].category + "</figcaption><img src=" + arr[i].image + " />");
+                }
+            }
+
+            
+            //Create the page with all pictures
+            CreateThePage(allPicture);
+            
+            // Create the function that will filter the data
+            $("#filter").on("change", function(){
+               var selectedOption = $(this).val();
+              if (selectedOption === "food") {
+                $(".containerGridPictures").empty();
+                CreateThePage(food);
+              }else if(selectedOption === "nature") {
+                $(".containerGridPictures").empty();
+                CreateThePage(nature);
+              } else if(selectedOption === "people") {
+                $(".containerGridPictures").empty();
+                  CreateThePage(people)
+              } else {
+                $(".containerGridPictures").empty();
+                  CreateThePage(allPicture)
+              }
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+    <div class="gridContainer">
+        <nav class="header">
+            <ul class="gridContainerForHeader">
+                <li class="sortPd">
+                    <select class="sortPulldown" name="sort" id="sort">
+                        <option value="sortThePhotos">Sort the photos</option>
+                        <option value="newToOld">New to old</option>
+                        <option value="oldTONew">Old to new</option>
+                    </select>
+                </li>
+                <li class="filterPd">
+                    <select class="filterPulldown" name="filter" id="filter">
+                        <option value="all">All photos</option>
+                        <option value="people">People</option>
+                        <option value="nature">Nature</option>
+                        <option value="food">Food</option>
+                    </select>
+                </li>
+                <li class="miyasPhoto"><a href="./browsePhoto.html">Miyabi's photos</a></li>
+                <li class="links"><a href="#">Links</a></li>
+                <li class="profile">
+                    <a href="./profile.html">Miyabi</a>
+                    <ul class="dropDownMenu">
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="containerGridPictures">
+
+        </div>
+            <!-- <figure class="boardForPhotos">
+                <figcaption >Date: June 27th, 2020</figcaption>
+                <figcaption >Category: People</figcaption>
+                <img src="img/montreal.jpg" alt="In Montreal">
+            </figure> -->
+       
+        <!-- <figure class="boardForPhotos">
+            <figcaption>Date: June 27th, 2020</figcaption>
+            <figcaption>Category: Nature</figcaption>
+            <img src="img/seaInPhilipines.jpg" alt="Sea in the Philipines">
+        </figure>
+        <figure class="boardForPhotos">
+            <figcaption>Date: June 27th, 2020</figcaption>
+            <figcaption>Category: Nature</figcaption>
+            <img src="img/Tulips.jpg" alt="Tulips">
+        </figure>
+        <figure class="boardForPhotos">
+            <figcaption>Date: June 27th, 2020</figcaption>
+            <figcaption>Category: Nature</figcaption>
+            <img src="img/faceCookies.jpg" alt="Sea in the Philipines">
+        </figure>
+        <figure class="boardForPhotos">
+            <figcaption>Date: June 27th, 2020</figcaption>
+            <figcaption>Category: Nature</figcaption>
+            <img src="img/marlion.jpg" alt="Sea in the Philipines">
+        </figure>
+        <figure class="boardForPhotos">
+            <figcaption>Date: June 27th, 2020</figcaption>
+            <figcaption>Category: Nature</figcaption>
+            <img src="img/paella.jpg" alt="Sea in the Philipines">
+        </figure>
+        <figure class="boardForPhotos">
+            <figcaption>Date: June 27th, 2020</figcaption>
+            <figcaption>Category: Nature</figcaption>
+            <img src="img/hydrangea.jpg" alt="Sea in the Philipines">
+        </figure>
+        <figure class="boardForPhotos">
+            <figcaption>Date: June 27th, 2020</figcaption>
+            <figcaption>Category: Nature</figcaption>
+            <img src="img/italianFoodNight.jpg" alt="Sea in the Philipines">
+        </figure>
+        <figure class="boardForPhotos">
+            <figcaption>Date: June 27th, 2020</figcaption>
+            <figcaption>Category: Nature</figcaption>
+            <img src="img/inTheBlueSky.jpg" alt="Sea in the Philipines">
+        </figure>  -->
+    </div>
+    <div class="buttonToPost">
+        <button class="postButton" onclick="window.location.href='postPhoto.html'">POST A PHOTO</button>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+@import './common';
+@import './style';
+
+.gridForDescri {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+
+    .photoDescription {
+        grid-column: 1 / 2;
+
+        img {
+            height: 400px;
+            width: 600px;
+        }
+    }
+
+    .descriPart {
+        grid-column: 2 / 3;
+    }
+}
+
+
+// .inMontreal {
+//     height: 400px;
+//     width: 600px;
+// }

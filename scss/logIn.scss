@@ -1,0 +1,58 @@
+@import './common';
+@import './style';
+
+
+.logInForm {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+    .username {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+
+    .password {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+
+    .logInButton {
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+    }
+}
+
+.flashForCamera {
+    // position: absolute;
+    // top: -25%;
+    // left: 13%;
+    
+
+    .flash {
+        background: $flash;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        text-align: center;
+    
+        &::before,
+        &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100px;
+        width: 100px;
+        background: $flash;
+        }
+    
+        &::before {
+        transform: rotate(30deg);
+        }
+    
+        &::after {
+        transform: rotate(60deg);
+        }
+    }
+}

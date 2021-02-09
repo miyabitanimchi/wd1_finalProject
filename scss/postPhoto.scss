@@ -1,0 +1,75 @@
+@import './common';
+@import './style';
+
+.gridForPosting {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    
+
+    .gridForDnD {
+        display: grid;
+        grid-template-columns: repeat(5,  1fr);
+        grid-template-rows: repeat(6, 1fr);
+        border: 1px dashed gray;
+        border-radius: 10px;
+
+        img {
+            grid-column: 1 / 6;
+            grid-row: 1 / 4;
+        }
+
+        .dndFileOr {
+            grid-column: 1 / 6;
+            grid-row: 4 / 6;
+        }
+
+        button {
+            grid-column: 3 / 4;
+            grid-row: 6 / 7;
+        }
+    }
+
+    .infoToPost {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+
+        .chooseDate {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+        }
+
+        .categoryArea {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+        }
+
+    .newCategoryArea {
+        grid-column: 3 / 5;
+        grid-row: 2 / 3;
+    }
+
+    .toCreateNewCtgy {
+        grid-column: 5 / 6;
+        grid-row: 2 / 3;
+    }
+
+    .putTitle {
+        grid-column: 1 / 6;
+        grid-row: 3 / 4;
+    }
+
+    .putDescription {
+        grid-column: 1 / 6;
+        grid-row: 4 / 7;
+    }
+
+    .toPost {
+        grid-column: 3 / 4;
+        grid-row: 7 / 8;
+    } 
+
+    }
+
+}

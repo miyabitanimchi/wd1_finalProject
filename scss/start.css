@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff8c1;
+}
+
+li {
+  list-style: none;
+}
+
+.makeSomeAnimation h1 {
+  text-align: center;
+}
+
+.makeSomeAnimation .clutteredWithPhotos {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding-top: 500px;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .utsurundesu {
+  position: absolute;
+  top: -15%;
+  left: -27%;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+.makeSomeAnimation .clutteredWithPhotos .flashForCamera {
+  position: absolute;
+  top: -25%;
+  left: 13%;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .flashForCamera .flash {
+  background: #fcd307;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  text-align: center;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .flashForCamera .flash::before, .makeSomeAnimation .clutteredWithPhotos .flashForCamera .flash::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100px;
+  background: #fcd307;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .flashForCamera .flash::before {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.makeSomeAnimation .clutteredWithPhotos .flashForCamera .flash::after {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+.makeSomeAnimation .clutteredWithPhotos .paella {
+  position: absolute;
+  height: 300px;
+  width: 450px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-10deg);
+          transform: translate(-50%, -50%) rotate(-10deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .pplILove {
+  position: absolute;
+  height: 300px;
+  width: 450px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(10deg);
+          transform: translate(-50%, -50%) rotate(10deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .running {
+  position: absolute;
+  height: 300px;
+  width: 450px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-40%, -40%) rotate(3deg);
+          transform: translate(-40%, -40%) rotate(3deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .sunsetInSg {
+  position: absolute;
+  height: 300px;
+  width: 450px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-70%, -70%) rotate(-21deg);
+          transform: translate(-70%, -70%) rotate(-21deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .karaoke {
+  position: absolute;
+  height: 300px;
+  width: 450px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-20%, -20%) rotate(7deg);
+          transform: translate(-20%, -20%) rotate(7deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .marlion {
+  position: absolute;
+  height: 300px;
+  width: 450px;
+  top: 51%;
+  left: 40%;
+  -webkit-transform: rotate(-4deg);
+          transform: rotate(-4deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .noto {
+  position: absolute;
+  height: 300px;
+  width: 450px;
+  top: 49%;
+  left: 38%;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .goodFriends {
+  position: absolute;
+  height: 300px;
+  width: 450px;
+  top: 52%;
+  left: 23%;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .autumn {
+  position: absolute;
+  height: 300px;
+  width: 450px;
+  top: 50%;
+  left: 43%;
+  -webkit-transform: rotate(23deg);
+          transform: rotate(23deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .cheers {
+  position: absolute;
+  height: 300px;
+  width: 450px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-53%, -53%) rotate(-8deg);
+          transform: translate(-53%, -53%) rotate(-8deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .hydrangea {
+  position: absolute;
+  height: 300px;
+  width: 450px;
+  top: 50%;
+  left: 60%;
+  -webkit-transform: translate(-53%, -53%) rotate(12deg);
+          transform: translate(-53%, -53%) rotate(12deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .giraffe {
+  position: absolute;
+  height: 300px;
+  width: 450px;
+  top: 57%;
+  left: 39%;
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .blueSky {
+  position: absolute;
+  height: 300px;
+  width: 450px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(5deg);
+          transform: translate(-50%, -50%) rotate(5deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .toStart {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: -webkit-gradient(linear, left top, right top, from(#ed213a), to(#93291e));
+  background: linear-gradient(to right, #ed213a, #93291e);
+  color: #ffeadb;
+  font-family: "Potta One", cursive;
+  padding: 15px 50px;
+  border-radius: 30px;
+  font-size: 1.1em;
+}
+/*# sourceMappingURL=start.css.map */
