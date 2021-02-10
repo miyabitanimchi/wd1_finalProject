@@ -19,10 +19,10 @@ li {
       grid-template-rows: 100px minmax(300px, auto);
 }
 
-.gridForProfile nav {
+.gridForProfile .header {
   -ms-grid-column: 1;
-  -ms-grid-column-span: 11;
-  grid-column: 1 / 12;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -30,23 +30,30 @@ li {
   background-color: rgba(255, 248, 193, 0.7);
 }
 
-.gridForProfile nav .gridContainerForHeader {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
+.gridForProfile .header .gridContainerForHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-left: 0;
+  padding-bottom: 20px;
 }
 
-.gridForProfile nav .gridContainerForHeader .miyasPhoto {
-  -ms-grid-column: 9;
-  -ms-grid-column-span: 2;
-  grid-column: 9 / 11;
+.gridForProfile .header .gridContainerForHeader .sortPd {
+  visibility: hidden;
+}
+
+.gridForProfile .header .gridContainerForHeader .filterPd {
+  visibility: hidden;
+}
+
+.gridForProfile .header .gridContainerForHeader .miyasPhoto {
   font-size: 1.1em;
-  margin: 0;
-  padding: 0;
 }
 
-.gridForProfile nav .gridContainerForHeader .miyasPhoto a {
+.gridForProfile .header .gridContainerForHeader .miyasPhoto a {
   display: block;
   margin: 0;
   padding: 13px 0;
@@ -57,14 +64,11 @@ li {
   text-decoration: none;
 }
 
-.gridForProfile nav .gridContainerForHeader .links {
-  -ms-grid-column: 11;
-  -ms-grid-column-span: 1;
-  grid-column: 11 / 12;
+.gridForProfile .header .gridContainerForHeader .links {
   font-size: 1.1em;
 }
 
-.gridForProfile nav .gridContainerForHeader .links a {
+.gridForProfile .header .gridContainerForHeader .links a {
   display: block;
   margin: 0;
   padding: 13px 0;
@@ -75,22 +79,20 @@ li {
   text-decoration: none;
 }
 
-.gridForProfile nav .gridContainerForHeader .profile {
-  -ms-grid-column: 12;
-  -ms-grid-column-span: 1;
-  grid-column: 12 / 13;
+.gridForProfile .header .gridContainerForHeader .profile {
+  display: inline;
   position: relative;
   margin: 0;
   padding: 0;
 }
 
-.gridForProfile nav .gridContainerForHeader .profile:hover .dropDownMenu li {
+.gridForProfile .header .gridContainerForHeader .profile:hover .dropDownMenu li {
   overflow: visible;
   height: 38px;
   border-bottom: 1px solid #fff;
 }
 
-.gridForProfile nav .gridContainerForHeader .profile a {
+.gridForProfile .header .gridContainerForHeader .profile a {
   display: block;
   margin: 0;
   padding: 13px 0;
@@ -101,14 +103,15 @@ li {
   text-decoration: none;
 }
 
-.gridForProfile nav .gridContainerForHeader .profile .dropDownMenu {
+.gridForProfile .header .gridContainerForHeader .profile .dropDownMenu {
   position: absolute;
+  top: 100%;
   left: 0;
   margin: 0;
   padding: 0;
 }
 
-.gridForProfile nav .gridContainerForHeader .profile .dropDownMenu li {
+.gridForProfile .header .gridContainerForHeader .profile .dropDownMenu li {
   overflow: hidden;
   width: 200%;
   height: 0;
@@ -117,7 +120,9 @@ li {
   transition: .2s;
 }
 
-.gridForProfile nav .gridContainerForHeader .profile .dropDownMenu a {
+.gridForProfile .header .gridContainerForHeader .profile .dropDownMenu a {
+  padding: 13px 15px;
+  text-align: left;
   font-size: 1.1em;
   font-weight: normal;
 }

@@ -9,121 +9,149 @@ li {
   list-style: none;
 }
 
-.gridForPosting {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  height: 100%;
+.postAPhoto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10%;
 }
 
-.gridForPosting .gridForDnD {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-  -ms-grid-rows: (1fr)[6];
-      grid-template-rows: repeat(6, 1fr);
-  border: 1px dashed gray;
+.postAPhoto .dnd {
+  position: relative;
+  border: dotted 1px gray;
+  border-radius: 20px;
+  width: 500px;
+  height: 350px;
+}
+
+.postAPhoto .dnd #input_file {
+  width: 500px;
+  height: 350px;
+  opacity: 0;
+}
+
+.postAPhoto .dnd #input_file #input_file:focus {
+  opacity: 1;
+}
+
+.postAPhoto .dnd #preview_field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.postAPhoto .dnd #preview_field img {
+  width: 500px;
+  height: 350px;
+  border-radius: 20px;
+}
+
+.postAPhoto .dnd #drop_area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 350px;
+  cursor: pointer;
+}
+
+.postAPhoto .dnd #drop_area p {
+  text-align: center;
+  padding-top: 10%;
+  font-size: 1.2em;
+}
+
+.postAPhoto .dnd #icon_clear_button {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: gray;
+  border: 1px solid gray;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.postAPhoto .infoToPost {
+  padding-top: 1%;
+  padding-right: 5%;
+  display: block;
+}
+
+.postAPhoto .infoToPost .chooseDate {
+  font-size: 1.1em;
+  margin-bottom: 3%;
+}
+
+.postAPhoto .infoToPost .chooseDate label {
+  padding-right: 2%;
+}
+
+.postAPhoto .infoToPost .chooseDate #date {
+  padding: 1% 3%;
   border-radius: 10px;
+  outline: none;
 }
 
-.gridForPosting .gridForDnD img {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
-  grid-column: 1 / 6;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
-  grid-row: 1 / 4;
+.postAPhoto .infoToPost .categoryArea {
+  font-size: 1.1em;
+  margin-bottom: 1%;
 }
 
-.gridForPosting .gridForDnD .dndFileOr {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
-  grid-column: 1 / 6;
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 2;
-  grid-row: 4 / 6;
+.postAPhoto .infoToPost .categoryArea label {
+  padding-right: 2%;
 }
 
-.gridForPosting .gridForDnD button {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3 / 4;
-  -ms-grid-row: 6;
-  -ms-grid-row-span: 1;
-  grid-row: 6 / 7;
+.postAPhoto .infoToPost .categoryArea #filter {
+  padding: 1% 3%;
+  border-radius: 7px;
 }
 
-.gridForPosting .infoToPost {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-  -ms-grid-rows: (1fr)[7];
-      grid-template-rows: repeat(7, 1fr);
+.postAPhoto .infoToPost .newCategoryArea {
+  margin-bottom: 5%;
 }
 
-.gridForPosting .infoToPost .chooseDate {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / 3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
+.postAPhoto .infoToPost .newCategoryArea #newCategory {
+  border-radius: 3px;
+  outline: none;
 }
 
-.gridForPosting .infoToPost .categoryArea {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / 3;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
+.postAPhoto .infoToPost .putTitle {
+  margin-bottom: 1%;
 }
 
-.gridForPosting .infoToPost .newCategoryArea {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
-  grid-column: 3 / 5;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
+.postAPhoto .infoToPost .putTitle label {
+  font-size: 1.1em;
 }
 
-.gridForPosting .infoToPost .toCreateNewCtgy {
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 1;
-  grid-column: 5 / 6;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
+.postAPhoto .infoToPost .putTitle #title {
+  width: 100%;
+  font-size: 1.1em;
+  border-radius: 5px;
 }
 
-.gridForPosting .infoToPost .putTitle {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
-  grid-column: 1 / 6;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / 4;
+.postAPhoto .infoToPost .putDescription {
+  margin-bottom: 3%;
 }
 
-.gridForPosting .infoToPost .putDescription {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
-  grid-column: 1 / 6;
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 3;
-  grid-row: 4 / 7;
+.postAPhoto .infoToPost .putDescription label {
+  font-size: 1.1em;
 }
 
-.gridForPosting .infoToPost .toPost {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3 / 4;
-  -ms-grid-row: 7;
-  -ms-grid-row-span: 1;
-  grid-row: 7 / 8;
+.postAPhoto .infoToPost .toPost {
+  width: 100%;
+  padding: 2% 0;
+  border-radius: 15px;
+  outline: none;
 }
 /*# sourceMappingURL=postPhoto.css.map */

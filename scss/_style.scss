@@ -16,3 +16,14 @@ $fontFamily: 'Potta One', cursive;
     height: 300px;
     width: 450px;
 }
+
+@mixin ForAInHeader($block) {
+    display: $block;
+    margin: 0;
+    padding: 13px 0;
+    color: gray;
+    font-size: $fontsizeForHeader;
+    font-weight: bold;
+    line-height: 1;
+    text-decoration: none;
+}

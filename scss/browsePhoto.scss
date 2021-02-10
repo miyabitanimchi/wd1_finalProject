@@ -15,34 +15,31 @@
         background-color: $ColorWithTransparency;
 
         .gridContainerForHeader {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-        
+            display: flex;
+            justify-content: space-evenly;
+            padding-left: 0;
+            padding-bottom: 20px;
+           
             .sortPd {
-                grid-column: 1 / 2;
         
                 .sortPulldown {
-                    padding: 5px 15px;
+                    padding: 5px 30px;
                     border-radius: 10px;
                     color: gray;
                 }
             }
         
             .filterPd {
-                grid-column: 3 / 4;
         
                 .filterPulldown {
-                    padding: 5px 15px;
+                    padding: 5px 30px;
                     border-radius: 10px;
                     color: gray;
                 }
             }
         
             .miyasPhoto {
-                grid-column: 9 / 11;
                 font-size: $fontsizeForHeader;
-                margin: 0;
-                padding: 0;
         
                 a {
                     display: block;
@@ -57,7 +54,6 @@
             }
         
             .links {
-                grid-column: 11 / 12;
                 font-size: $fontsizeForHeader;
         
                 a {
@@ -73,7 +69,7 @@
             }
         
             .profile {
-                grid-column: 12 / 13;
+                display: inline;
                 position: relative;
                 margin: 0;
                 padding: 0;
@@ -96,7 +92,7 @@
                 }
                 .dropDownMenu {
                     position: absolute;
-                    // top: 100%;
+                    top: 100%;
                     left: 0;
                     margin: 0;
                     padding: 0;
@@ -110,8 +106,8 @@
                     }
         
                     a {
-                        // padding: 13px 15px;
-                        // text-align: left;
+                        padding: 13px 15px;
+                        text-align: left;
                         font-size: $fontsizeForHeader;
                         font-weight: normal;
                     }
@@ -156,25 +152,25 @@
     }
 }
 
-    .buttonToPost {
-        background: $totallyTransparent;
-        text-align: center;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        position: sticky;
-        bottom: 0;
-        width: 100%;
+.buttonToPost {
+    background: $totallyTransparent;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
 
 
-        .postButton {
-            background: linear-gradient(to right, #ed213a, #93291e);
-            color: #ffeadb;
-            font-family: $fontFamily;
-            padding: 15px 50px;
-            border-radius: 30px;
-            font-size: 1.1em;
-        }
- }
+    .postButton {
+        background: linear-gradient(to right, #ed213a, #93291e);
+        color: #ffeadb;
+        font-family: $fontFamily;
+        padding: 15px 50px;
+        border-radius: 30px;
+        font-size: 1.1em;
+    }
+}
 
  @media screen and (max-width: 900px) {
      body {

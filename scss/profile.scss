@@ -6,53 +6,45 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 100px minmax(300px, auto);
 
-    nav {
-        grid-column: 1 / 12;
+    .header {
+        grid-column: 1 / 13;
         position: sticky;
         top: 0;
         width: 100%;
         background-color: $ColorWithTransparency;
 
         .gridContainerForHeader {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
+            display: flex;
+            justify-content: space-evenly;
+            padding-left: 0;
+            padding-bottom: 20px;
+           
+            .sortPd {
+               visibility: hidden;
+            }
+        
+            .filterPd {
+               visibility: hidden;
+            }
         
             .miyasPhoto {
-                grid-column: 9 / 11;
                 font-size: $fontsizeForHeader;
-                margin: 0;
-                padding: 0;
         
                 a {
-                    display: block;
-                    margin: 0;
-                    padding: 13px 0;
-                    color: gray;
-                    font-size: $fontsizeForHeader;
-                    font-weight: bold;
-                    line-height: 1;
-                    text-decoration: none;
+                    @include ForAInHeader(block);
                 }
             }
         
             .links {
-                grid-column: 11 / 12;
                 font-size: $fontsizeForHeader;
         
                 a {
-                    display: block;
-                    margin: 0;
-                    padding: 13px 0;
-                    color: gray;
-                    font-size: $fontsizeForHeader;
-                    font-weight: bold;
-                    line-height: 1;
-                    text-decoration: none;
+                    @include ForAInHeader(block);
                 }
             }
         
             .profile {
-                grid-column: 12 / 13;
+                display: inline;
                 position: relative;
                 margin: 0;
                 padding: 0;
@@ -64,18 +56,11 @@
                 }
         
                 a {
-                    display: block;
-                    margin: 0;
-                    padding: 13px 0;
-                    color: gray;
-                    font-size: $fontsizeForHeader;
-                    font-weight: bold;
-                    line-height: 1;
-                    text-decoration: none;
+                    @include ForAInHeader(block);
                 }
                 .dropDownMenu {
                     position: absolute;
-                    // top: 100%;
+                    top: 100%;
                     left: 0;
                     margin: 0;
                     padding: 0;
@@ -89,8 +74,8 @@
                     }
         
                     a {
-                        // padding: 13px 15px;
-                        // text-align: left;
+                        padding: 13px 15px;
+                        text-align: left;
                         font-size: $fontsizeForHeader;
                         font-weight: normal;
                     }
