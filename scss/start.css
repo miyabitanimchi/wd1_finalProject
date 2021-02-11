@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #fff8c1;
+  background: #fff8c1 !important;
 }
 
 li {
@@ -11,6 +11,16 @@ li {
 
 .makeSomeAnimation h1 {
   text-align: center;
+}
+
+.makeSomeAnimation:hover .blueSky {
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.makeSomeAnimation:hover .giraffe {
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
 }
 
 .makeSomeAnimation .clutteredWithPhotos {
@@ -202,10 +212,8 @@ li {
   width: 450px;
   top: 57%;
   left: 39%;
-  -webkit-transform: rotate(3deg);
-          transform: rotate(3deg);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .makeSomeAnimation .clutteredWithPhotos .blueSky {
@@ -214,10 +222,8 @@ li {
   width: 450px;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(5deg);
-          transform: translate(-50%, -50%) rotate(5deg);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .makeSomeAnimation .clutteredWithPhotos .toStart {
@@ -233,5 +239,24 @@ li {
   padding: 15px 50px;
   border-radius: 30px;
   font-size: 1.1em;
+  cursor: pointer;
+  -webkit-box-shadow: 10px 10px 5px gray;
+          box-shadow: 10px 10px 5px gray;
+}
+
+.testhover {
+  width: 200px;
+  height: 200px;
+  background: salmon;
+}
+
+.testhover .testhoverkid {
+  width: 100px;
+  height: 100px;
+  background: sandybrown;
+}
+
+.testhover:hover {
+  background: skyblue;
 }
 /*# sourceMappingURL=start.css.map */

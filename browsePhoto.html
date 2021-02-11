@@ -5,17 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./scss/browsePhoto.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+    <!-- <link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" /> -->
+
+    <!--boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
     <title>Miyabi's photos</title>
 
+    <!--Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+    <!--fancybox-->
+    <!-- <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
     <script type="text/javascript" src="/fancybox/jquery.easing-1.4.pack.js"></script>
-    <script type="text/javascript" src="/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script type="text/javascript" src="/fancybox/jquery.mousewheel-3.0.4.pack.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <script>
         $(document).ready(function(){ // Wait until the browser finish to read the html and then read the script
             //create the fake data
+
+            $(function(){
+                $("body").hide().fadeIn(1000);
+            });
+
             var allPicture = [ // all categories
                 {
                     data: "11/24/2020",
@@ -222,62 +237,74 @@
                 {
                     data: "05/27/2020",
                     category: "People",
-                    image: "img/cheers.jpg"
+                    image: "img/cheers.jpg",
+                    id: "modal1"
                 },
                 {
                     data: "05/27/2020",
                     category: "People",
-                    image: "img/funNight.jpg"
+                    image: "img/funNight.jpg",
+                    id: "modal2"
                 },
                 {
                     data: "05/27/2020",
                     category: "People",
-                    image: "img/funNight2.jpg"
+                    image: "img/funNight2.jpg",
+                    id: "modal3"
                 },
                 {
                     data: "05/14/2020",
                     category: "People",
-                    image: "img/myFamily2.jpg"
+                    image: "img/myFamily2.jpg",
+                    id: "modal4"
                 },
                 {
                     data: "03/01/2020",
                     category: "People",
-                    image: "img/beforeThePandemic2.jpg"
+                    image: "img/beforeThePandemic2.jpg",
+                    id: "modal5"
                 },
                 {
                     data: "02/26/2020",
                     category: "People",
-                    image: "img/peopleILove3.jpg"
+                    image: "img/peopleILove3.jpg",
+                    id: "modal6"
                 },
                 {
                     data: "07/20/2019",
                     category: "People",
-                    image: "img/trumpet2.jpg"
+                    image: "img/trumpet2.jpg",
+                    id: "modal7"
                 },
                 {
                     data: "06/15/2019",
                     category: "People",
-                    image: "img/havingFun.jpg"
+                    image: "img/havingFun.jpg",
+                    id: "modal8"
                 },
                 {
                     data: "06/15/2019",
                     category: "People",
-                    image: "img/karaoke.jpg"
+                    image: "img/karaoke.jpg",
+                    id: "modal9"
                 },
                 {
                     data: "04/30/2019",
                     category: "People",
-                    image: "img/yuyuAndharu.jpg"
+                    image: "img/yuyuAndharu.jpg",
+                    id: "modal10"
                 },
                 {
                     data: "01/28/2019",
                     category: "People",
-                    image: "img/sochan.jpg"
+                    image: "img/sochan.jpg",
+                    id: "modal11"
                 },
                 {   
                     data: "01/27/2019",
                     category: "People",
-                    image: "img/peopleILove.jpg"
+                    image: "img/peopleILove.jpg",
+                    id: "modal12"
                 },
             ]
 
@@ -416,7 +443,7 @@
             function CreateThePage(arr) {
                 var wrap = $(".containerGridPictures") // select the element that we will append the pictures 
                 for(i=0; i< arr.length; i++){
-                    wrap.append("<figure class='boardForPhotos'><figcaption> Date: " + arr[i].data + "</figcaption> <figcaption> Category: " + arr[i].category + "</figcaption><img src=" + arr[i].image + " />");
+                    wrap.append("<figure data-bs-toggle='modal'data-bs-target='model1' class='boardForPhotos'><figcaption> Date: " + arr[i].data + "</figcaption> <figcaption> Category: " + arr[i].category + "</figcaption><img src=" + arr[i].image + " />");
                 }
             }
 
@@ -430,15 +457,19 @@
                var selectedOption = $(this).val();
               if (selectedOption === "food") {
                 $(".containerGridPictures").empty();
+                $("body").hide().fadeIn(500); //add1
                 CreateThePage(food);
               }else if(selectedOption === "nature") {
                 $(".containerGridPictures").empty();
+                $("body").hide().fadeIn(500);  //add2
                 CreateThePage(nature);
               } else if(selectedOption === "people") {
                 $(".containerGridPictures").empty();
+                $("body").hide().fadeIn(500); //add3
                   CreateThePage(people)
               } else {
                 $(".containerGridPictures").empty();
+                $("body").hide().fadeIn(500); //add4
                   CreateThePage(allPicture)
               }
             })
@@ -455,18 +486,22 @@
                 if(filterSelected === "food"){
                     SortByDate(food); // will return the reverse array food
                         $(".containerGridPictures").empty(); // will clear the html page
+                        $("body").hide().fadeIn(500); //add5
                         CreateThePage(food); //create the page with the sorted food array
                 } else if(filterSelected === "people"){
                     SortByDate(people);
                         $(".containerGridPictures").empty();
+                        $("body").hide().fadeIn(500); //add6
                         CreateThePage(people);
                 } else if(filterSelected === "nature") {
                     SortByDate(nature);
                         $(".containerGridPictures").empty();
+                        $("body").hide().fadeIn(500); //add7
                         CreateThePage(nature);
                 } else {
                         SortByDate(allPicture);
                         $(".containerGridPictures").empty();
+                        $("body").hide().fadeIn(500); //add8
                         CreateThePage(allPicture);
                 }
             })
@@ -504,7 +539,7 @@
             </ul>
         </nav>
         <nav class="headerHamburgerMenu">
-            <ul>
+            <ul class="makePulldownInline">
                 <li class="sortPd">
                     <select class="sortPulldown triggerSort" name="sort" id="sort">
                         <option value="newToOld">New to old</option>
@@ -524,8 +559,8 @@
                 <input id="nav-input" type="checkbox" class="nav-hidden">
                 <label id="menubtn" for="nav-input"><img src="./img/hamburgerMenu.png" alt="hamburgerMenu"></label>
                 <nav>
-                    <ul>
-                        <li class="miyasPhoto"><a href="./browsePhoto.html">Miyabi's photos</a></li>
+                    <ul class="mobile_menu">
+                        <li class="miyasPhoto"><a href="./browsePhoto.html">My photos</a></li>
                         <li class="links"><a href="#">Links</a></li>
                         <li class="profile">
                             <a href="./profile.html">Miyabi</a>
@@ -541,55 +576,33 @@
         <div class="containerGridPictures">  
             
         </div>
-            <!-- <figure class="boardForPhotos">
-                <figcaption >Date: June 27th, 2020</figcaption>
-                <figcaption >Category: People</figcaption>
-                <img src="img/montreal.jpg" alt="In Montreal">
-            </figure> -->
-       
-        <!-- <figure class="boardForPhotos">
-            <figcaption>Date: June 27th, 2020</figcaption>
-            <figcaption>Category: Nature</figcaption>
-            <img src="img/seaInPhilipines.jpg" alt="Sea in the Philipines">
-        </figure>
-        <figure class="boardForPhotos">
-            <figcaption>Date: June 27th, 2020</figcaption>
-            <figcaption>Category: Nature</figcaption>
-            <img src="img/Tulips.jpg" alt="Tulips">
-        </figure>
-        <figure class="boardForPhotos">
-            <figcaption>Date: June 27th, 2020</figcaption>
-            <figcaption>Category: Nature</figcaption>
-            <img src="img/faceCookies.jpg" alt="Sea in the Philipines">
-        </figure>
-        <figure class="boardForPhotos">
-            <figcaption>Date: June 27th, 2020</figcaption>
-            <figcaption>Category: Nature</figcaption>
-            <img src="img/marlion.jpg" alt="Sea in the Philipines">
-        </figure>
-        <figure class="boardForPhotos">
-            <figcaption>Date: June 27th, 2020</figcaption>
-            <figcaption>Category: Nature</figcaption>
-            <img src="img/paella.jpg" alt="Sea in the Philipines">
-        </figure>
-        <figure class="boardForPhotos">
-            <figcaption>Date: June 27th, 2020</figcaption>
-            <figcaption>Category: Nature</figcaption>
-            <img src="img/hydrangea.jpg" alt="Sea in the Philipines">
-        </figure>
-        <figure class="boardForPhotos">
-            <figcaption>Date: June 27th, 2020</figcaption>
-            <figcaption>Category: Nature</figcaption>
-            <img src="img/italianFoodNight.jpg" alt="Sea in the Philipines">
-        </figure>
-        <figure class="boardForPhotos">
-            <figcaption>Date: June 27th, 2020</figcaption>
-            <figcaption>Category: Nature</figcaption>
-            <img src="img/inTheBlueSky.jpg" alt="Sea in the Philipines">
-        </figure>  -->
     </div>
-    <a class="iframe" href="./photoDescri.html">This goes to iframe</a>
 
+    <!-- Button trigger modal -->
+<a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">
+    Launch static backdrop modal
+</a>
+
+  
+    <!-- Modal -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
     <div class="buttonToPost">
         <button class="postButton" onclick="window.location.href='postPhoto.html'">POST A PHOTO</button>
     </div>

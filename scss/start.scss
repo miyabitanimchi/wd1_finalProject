@@ -4,6 +4,14 @@
 .makeSomeAnimation {
     h1 {
         text-align: center;
+        
+    }
+    &:hover .blueSky {
+        transform: rotate(10deg)
+    }
+
+    &:hover .giraffe {
+        transform: rotate(-10deg)
     }
 
     .clutteredWithPhotos {
@@ -146,17 +154,20 @@
             @include makeItCluttered(absolute);
             top: 57%;
             left: 39%;
-            transform: rotate(3deg);
-            transform-origin: bottom right;
+            // transform: rotate(3deg);
+            // transform-origin: bottom right;
+            transition: 0.5s;
         }
 
         .blueSky {
             @include makeItCluttered(absolute);
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) rotate(5deg);
-            transform-origin: bottom right;
+            // transform: translate(-50%, -50%) rotate(5deg);
+            // transform-origin: bottom right;
+            transition: 0.5s;
         }
+
 
         .toStart {
            position: absolute;
@@ -169,6 +180,24 @@
            padding: 15px 50px;
            border-radius: 30px;
            font-size: 1.1em;
+           cursor: pointer;
+           box-shadow: 10px 10px 5px gray;
         }
+    }
+}
+
+.testhover {
+    width: 200px;
+    height: 200px;
+    background: salmon;
+
+    .testhoverkid {
+        width: 100px;
+        height: 100px;background: sandybrown;
+
+    }
+
+    &:hover  {
+        background: skyblue;
     }
 }
