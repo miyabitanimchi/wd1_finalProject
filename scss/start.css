@@ -1,4 +1,171 @@
 @import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap");
+@-webkit-keyframes animeForTitle {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes animeForTitle {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes takeAPhoto {
+  0% {
+    top: -15%;
+  }
+  50% {
+    top: -13%;
+  }
+  100% {
+    top: -15%;
+  }
+}
+
+@keyframes takeAPhoto {
+  0% {
+    top: -15%;
+  }
+  50% {
+    top: -13%;
+  }
+  100% {
+    top: -15%;
+  }
+}
+
+@-webkit-keyframes flashScale {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes flashScale {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes movePhoto1 {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
+
+@keyframes movePhoto1 {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
+
+@-webkit-keyframes movePhoto2 {
+  0% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+@keyframes movePhoto2 {
+  0% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+@-webkit-keyframes movePhoto3 {
+  0% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+@keyframes movePhoto3 {
+  0% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -9,24 +176,109 @@ li {
   list-style: none;
 }
 
+@keyframes animeForTitle {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes takeAPhoto {
+  0% {
+    top: -15%;
+  }
+  50% {
+    top: -13%;
+  }
+  100% {
+    top: -15%;
+  }
+}
+
+@keyframes flashScale {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes movePhoto1 {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
+
+@keyframes movePhoto2 {
+  0% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+@keyframes movePhoto3 {
+  0% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+.makeSomeAnimation {
+  position: relative;
+}
+
 .makeSomeAnimation h1 {
   text-align: center;
-}
-
-.makeSomeAnimation:hover .blueSky {
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
-}
-
-.makeSomeAnimation:hover .giraffe {
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
+  font-family: "Barlow Condensed", sans-serif;
+  -webkit-animation-name: animeForTitle;
+          animation-name: animeForTitle;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 .makeSomeAnimation .clutteredWithPhotos {
   position: relative;
   height: 100%;
   width: 100%;
+  margin: 0 auto;
   padding-top: 500px;
 }
 
@@ -52,6 +304,8 @@ li {
   height: 100px;
   position: relative;
   text-align: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .makeSomeAnimation .clutteredWithPhotos .flashForCamera .flash::before, .makeSomeAnimation .clutteredWithPhotos .flashForCamera .flash::after {
@@ -74,40 +328,14 @@ li {
           transform: rotate(60deg);
 }
 
-.makeSomeAnimation .clutteredWithPhotos .paella {
-  position: absolute;
-  height: 300px;
-  width: 450px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(-10deg);
-          transform: translate(-50%, -50%) rotate(-10deg);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-}
-
-.makeSomeAnimation .clutteredWithPhotos .pplILove {
-  position: absolute;
-  height: 300px;
-  width: 450px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(10deg);
-          transform: translate(-50%, -50%) rotate(10deg);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-}
-
 .makeSomeAnimation .clutteredWithPhotos .running {
   position: absolute;
   height: 300px;
   width: 450px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-40%, -40%) rotate(3deg);
-          transform: translate(-40%, -40%) rotate(3deg);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
+  top: 20%;
+  left: 25%;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
 }
 
 .makeSomeAnimation .clutteredWithPhotos .sunsetInSg {
@@ -115,23 +343,19 @@ li {
   height: 300px;
   width: 450px;
   top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-70%, -70%) rotate(-21deg);
-          transform: translate(-70%, -70%) rotate(-21deg);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  left: 47%;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
 }
 
 .makeSomeAnimation .clutteredWithPhotos .karaoke {
   position: absolute;
   height: 300px;
   width: 450px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-20%, -20%) rotate(7deg);
-          transform: translate(-20%, -20%) rotate(7deg);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  top: 20%;
+  left: 35%;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
 }
 
 .makeSomeAnimation .clutteredWithPhotos .marlion {
@@ -140,22 +364,18 @@ li {
   width: 450px;
   top: 51%;
   left: 40%;
-  -webkit-transform: rotate(-4deg);
-          transform: rotate(-4deg);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
 }
 
 .makeSomeAnimation .clutteredWithPhotos .noto {
   position: absolute;
   height: 300px;
   width: 450px;
-  top: 49%;
-  left: 38%;
-  -webkit-transform: rotate(-7deg);
-          transform: rotate(-7deg);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  top: 55%;
+  left: 35%;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
 }
 
 .makeSomeAnimation .clutteredWithPhotos .goodFriends {
@@ -164,69 +384,112 @@ li {
   width: 450px;
   top: 52%;
   left: 23%;
-  -webkit-transform: rotate(-7deg);
-          transform: rotate(-7deg);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
 }
 
-.makeSomeAnimation .clutteredWithPhotos .autumn {
+.makeSomeAnimation .clutteredWithPhotos .keithResting {
   position: absolute;
   height: 300px;
   width: 450px;
   top: 50%;
   left: 43%;
-  -webkit-transform: rotate(23deg);
-          transform: rotate(23deg);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
 }
 
 .makeSomeAnimation .clutteredWithPhotos .cheers {
   position: absolute;
   height: 300px;
   width: 450px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-53%, -53%) rotate(-8deg);
-          transform: translate(-53%, -53%) rotate(-8deg);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  top: 30%;
+  left: 25%;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
 }
 
 .makeSomeAnimation .clutteredWithPhotos .hydrangea {
   position: absolute;
   height: 300px;
   width: 450px;
-  top: 50%;
-  left: 60%;
-  -webkit-transform: translate(-53%, -53%) rotate(12deg);
-          transform: translate(-53%, -53%) rotate(12deg);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  top: 27%;
+  left: 45%;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
 }
 
 .makeSomeAnimation .clutteredWithPhotos .giraffe {
   position: absolute;
   height: 300px;
   width: 450px;
-  top: 57%;
+  top: 35%;
   left: 39%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
 }
 
 .makeSomeAnimation .clutteredWithPhotos .blueSky {
   position: absolute;
   height: 300px;
   width: 450px;
-  top: 50%;
-  left: 50%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  top: 40%;
+  left: 35%;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
 }
 
-.makeSomeAnimation .clutteredWithPhotos .toStart {
+.makeSomeAnimation .clutteredWithPhotos .activeForCamera {
+  -webkit-animation-name: takeAPhoto;
+          animation-name: takeAPhoto;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .activeForFlash {
+  -webkit-animation-name: flashScale;
+          animation-name: flashScale;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .active1 {
+  -webkit-animation-name: movePhoto1;
+          animation-name: movePhoto1;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .active2 {
+  -webkit-animation-name: movePhoto2;
+          animation-name: movePhoto2;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .active3 {
+  -webkit-animation-name: movePhoto3;
+          animation-name: movePhoto3;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.makeSomeAnimation .clutteredWithPhotos #toStart {
   position: absolute;
   top: 53%;
   left: 50%;
@@ -235,28 +498,21 @@ li {
   background: -webkit-gradient(linear, left top, right top, from(#ed213a), to(#93291e));
   background: linear-gradient(to right, #ed213a, #93291e);
   color: #ffeadb;
-  font-family: "Potta One", cursive;
+  font-family: "Barlow Condensed", sans-serif;
   padding: 15px 50px;
   border-radius: 30px;
   font-size: 1.1em;
   cursor: pointer;
   -webkit-box-shadow: 10px 10px 5px gray;
           box-shadow: 10px 10px 5px gray;
+  outline: none;
+  z-index: 100;
 }
 
-.testhover {
-  width: 200px;
-  height: 200px;
-  background: salmon;
-}
-
-.testhover .testhoverkid {
-  width: 100px;
-  height: 100px;
-  background: sandybrown;
-}
-
-.testhover:hover {
-  background: skyblue;
+.makeSomeAnimation .clutteredWithPhotos #toStart:hover {
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2);
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 /*# sourceMappingURL=start.css.map */

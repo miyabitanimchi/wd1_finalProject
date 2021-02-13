@@ -9,6 +9,7 @@ $flash: #fcd307;
 //font
 $fontsizeForHeader: 1.1em;
 $fontFamily: 'Potta One', cursive;
+$fontFamilyForStart: 'Barlow Condensed', sans-serif;
 
 //cluttered with photos
 @mixin makeItCluttered($absolute) {
@@ -27,3 +28,82 @@ $fontFamily: 'Potta One', cursive;
     line-height: 1;
     text-decoration: none;
 }
+
+@keyframes animeForTitle {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes takeAPhoto {
+    0% {
+        top: -15%;
+    }
+    50% {
+        top: -13%;
+    }
+    100% {
+        top: -15%;
+    }
+}
+
+@keyframes flashScale {
+    0% {
+        transform: scale(0);
+        
+    }
+    50% {
+        transform: scale(1.5);
+
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+
+@keyframes movePhoto1 {
+    0% {
+        transform: rotate(10deg);
+        // transition: all 0.3s ease-in-out 0s;
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(10deg);
+        // transition: all 0.3s ease-in-out 0s;;
+    }
+}
+
+@keyframes movePhoto2 {
+    0% {
+        transform: rotate(-10deg);
+        // transition: all 0.3s ease-in-out 0s;
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+        // transition: all 0.3s ease-in-out 0s;;
+    }
+}
+
+@keyframes movePhoto3 {
+    0% {
+        transform: rotate(-5deg);
+        // transition: all 0.3s ease-in-out 0s;
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+        // transition: all 0.3s ease-in-out 0s;;
+    }
+}
+

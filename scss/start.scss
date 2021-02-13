@@ -1,24 +1,28 @@
 @import './common';
 @import './style';
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
 
 .makeSomeAnimation {
+    position: relative;
+    
+    
     h1 {
         text-align: center;
-        
-    }
-    &:hover .blueSky {
-        transform: rotate(10deg)
-    }
-
-    &:hover .giraffe {
-        transform: rotate(-10deg)
+        font-family: $fontFamilyForStart;
+        animation-name: animeForTitle;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
     }
 
     .clutteredWithPhotos {
         position: relative;
         height: 100%;
         width: 100%;
+        margin: 0 auto;
+        // width: 100%;
         padding-top: 500px;
+
+        
 
         .utsurundesu {
             position: absolute;
@@ -40,6 +44,7 @@
                 height: 100px;
                 position: relative;
                 text-align: center;
+                transform: scale(0);
             
                 &::before,
                 &::after {
@@ -62,142 +67,144 @@
             }
         }
 
-        .paella {
-            @include makeItCluttered(absolute);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-10deg);
-            transform-origin: 0 0;
-        }
-
-        .pplILove {
-            @include makeItCluttered(absolute);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(10deg);
-            transform-origin: 0 0;
-        }
-
+        //keyframes are in style.css
         .running {
             @include makeItCluttered(absolute);
-            top: 50%;
-            left: 50%;
-            transform: translate(-40%, -40%) rotate(3deg);
-            transform-origin: 0 0;
+            top: 20%;
+            left: 25%;
+            transform: rotate(-10deg);
         }
 
         .sunsetInSg {
             @include makeItCluttered(absolute);
             top: 50%;
-            left: 50%;
-            transform: translate(-70%, -70%) rotate(-21deg);
-            transform-origin: bottom right;
+            left: 47%;
+            transform: rotate(-20deg);
         }
 
         .karaoke {
             @include makeItCluttered(absolute);
-            top: 50%;
-            left: 50%;
-            transform: translate(-20%, -20%) rotate(7deg);
-            transform-origin: bottom right;
+            top: 20%;
+            left: 35%;
+            transform: rotate(-10deg);
         }
 
         .marlion {
             @include makeItCluttered(absolute);
             top: 51%;
             left: 40%;
-            transform: rotate(-4deg);
-            transform-origin: bottom right;
+            transform: rotate(10deg);
         }
 
         .noto {
             @include makeItCluttered(absolute);
-            top: 49%;
-            left: 38%;
-            transform: rotate(-7deg);
-            transform-origin: bottom right;
+            top: 55%;
+            left: 35%;
+            transform: rotate(-10deg);
         }
 
         .goodFriends {
             @include makeItCluttered(absolute);
             top: 52%;
             left: 23%;
-            transform: rotate(-7deg);
-            transform-origin: bottom right;
+            transform: rotate(20deg);
         }
 
-        .autumn {
+        .keithResting {
             @include makeItCluttered(absolute);
             top: 50%;
             left: 43%;
-            transform: rotate(23deg);
-            transform-origin: bottom right;
+            transform: rotate(20deg);
         }
 
         .cheers {
             @include makeItCluttered(absolute);
-            top: 50%;
-            left: 50%;
-            transform: translate(-53%, -53%) rotate(-8deg);
-            transform-origin: bottom right;
+            top: 30%;
+            left: 25%;
+            transform: rotate(-20deg);
         }
 
         .hydrangea {
             @include makeItCluttered(absolute);
-            top: 50%;
-            left: 60%;
-            transform: translate(-53%, -53%) rotate(12deg);
-            transform-origin: bottom right;
+            top: 27%;
+            left: 45%;
+            transform: rotate(20deg);
         }
 
         .giraffe {
             @include makeItCluttered(absolute);
-            top: 57%;
+            top: 35%;
             left: 39%;
-            // transform: rotate(3deg);
-            // transform-origin: bottom right;
-            transition: 0.5s;
+            transform: rotate(-20deg);
         }
-
+        
         .blueSky {
             @include makeItCluttered(absolute);
-            top: 50%;
-            left: 50%;
-            // transform: translate(-50%, -50%) rotate(5deg);
-            // transform-origin: bottom right;
-            transition: 0.5s;
+            top: 40%;
+            left: 35%;
+            transform: rotate(20deg);
         }
 
+         // Animation with Jquery
+        .activeForCamera {
+            animation-name: takeAPhoto;
+            animation-duration: .3s;
+            animation-iteration-count: 1;
+        }
 
-        .toStart {
+        .activeForFlash {
+            animation-name: flashScale;
+            animation-duration: .5s;
+            animation-iteration-count: 1;
+        }
+       
+       .active1 {
+            animation-name: movePhoto1;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+       }
+
+       .active2 {
+           animation-name: movePhoto2;
+           animation-duration: 1s;
+           animation-iteration-count: infinite;
+           animation-timing-function: ease-in-out;
+       }
+
+       .active3 {
+            animation-name: movePhoto3;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+    }
+    //Animiayion with Jquery
+
+        
+
+
+        #toStart {
            position: absolute;
            top: 53%;
            left: 50%;
            transform: translate(-50%, -50%);
            background: linear-gradient(to right, #ed213a, #93291e);
            color: #ffeadb;
-           font-family: $fontFamily;
+           font-family: $fontFamilyForStart;
            padding: 15px 50px;
            border-radius: 30px;
            font-size: 1.1em;
            cursor: pointer;
            box-shadow: 10px 10px 5px gray;
+           outline: none;
+           z-index: 100;
+
+           &:hover {
+               transform: translate(-50%, -50%) scale(1.2);
+               transition: .3s;
+           }
         }
-    }
+
+}
 }
 
-.testhover {
-    width: 200px;
-    height: 200px;
-    background: salmon;
-
-    .testhoverkid {
-        width: 100px;
-        height: 100px;background: sandybrown;
-
-    }
-
-    &:hover  {
-        background: skyblue;
-    }
-}

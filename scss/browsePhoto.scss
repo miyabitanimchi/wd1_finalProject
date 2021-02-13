@@ -17,8 +17,7 @@
         .gridContainerForHeader {
             display: flex;
             justify-content: space-evenly;
-            padding-left: 0;
-            padding-bottom: 20px;
+            padding: 20px 0;
            
             .sortPd {
         
@@ -542,4 +541,19 @@
            }
        }
     }
+ }
+
+ .title{
+     display: none;
+ }
+
+ .description {
+     display: none;
+ }
+
+ .heart{
+     cursor: pointer;
+ }
+ .heartToUndo {
+     color: red !important;
  }
