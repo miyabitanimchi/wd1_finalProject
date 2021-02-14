@@ -10,6 +10,7 @@
     .header {
         grid-column: 1 / 4;
         position: sticky;
+        z-index: 100;
         top: 0;
         width: 100%;
         background-color: $ColorWithTransparency;
@@ -24,7 +25,8 @@
                 .sortPulldown {
                     padding: 5px 30px;
                     border-radius: 10px;
-                    color: gray;
+                    color: $colorForHeaderFont;
+                    cursor: pointer;
                 }
             }
         
@@ -33,38 +35,17 @@
                 .filterPulldown {
                     padding: 5px 30px;
                     border-radius: 10px;
-                    color: gray;
+                    color: $colorForHeaderFont;
+                    cursor: pointer;
                 }
             }
         
             .miyasPhoto {
                 font-size: $fontsizeForHeader;
-        
-                a {
-                    display: block;
-                    margin: 0;
-                    padding: 13px 0;
-                    color: gray;
-                    font-size: $fontsizeForHeader;
-                    font-weight: bold;
-                    line-height: 1;
-                    text-decoration: none;
-                }
             }
         
             .links {
                 font-size: $fontsizeForHeader;
-        
-                a {
-                    display: block;
-                    margin: 0;
-                    padding: 13px 0;
-                    color: gray;
-                    font-size: $fontsizeForHeader;
-                    font-weight: bold;
-                    line-height: 1;
-                    text-decoration: none;
-                }
             }
         
             .profile {
@@ -72,46 +53,72 @@
                 position: relative;
                 margin: 0;
                 padding: 0;
+                font-size: $fontsizeForHeader;
         
                 &:hover .dropDownMenu li {
                     overflow: visible;
                     height: 38px;
-                    border-bottom: 1px solid #fff;
                 }
-        
-                a {
-                    display: block;
-                    margin: 0;
-                    padding: 13px 0;
-                    color: gray;
-                    font-size: $fontsizeForHeader;
-                    font-weight: bold;
-                    line-height: 1;
-                    text-decoration: none;
-                }
+
                 .dropDownMenu {
                     position: absolute;
                     top: 100%;
                     left: 0;
-                    margin: 0;
+                    margin-top: 15px;
                     padding: 0;
         
                     li {
                         overflow: hidden;
                         width: 200%;
                         height: 0;
-                        color: gray;
+                        color: $colorForHeaderFont;
                         transition: .2s;
                     }
         
                     a {
                         padding: 13px 15px;
                         text-align: left;
-                        font-size: $fontsizeForHeader;
+                        color: $colorForHeaderFont;
+                        font-size: $fontsizeForHeaderDD;
                         font-weight: normal;
+                        text-decoration: none;
+                        line-height: 1;
+
+                        &:hover {
+                            font-weight: bold;
+                            transition: .2s;
+                        }
                     }
                 }
              }
+
+             .mainList {
+                margin: 0;
+                padding: 13px 0;
+                color: $colorForHeaderFont;
+                font-size: $fontsizeForHeader;
+                font-weight: bold;
+                line-height: 1;
+                text-decoration: none;
+                position: relative;
+
+                &:after {    
+                    background: none repeat scroll 0 0 transparent;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    left: 50%;
+                    position: absolute;
+                    background: $colorForHeaderFont;
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    width: 0;
+                  }
+                  &:hover:after { 
+                    width: 100%; 
+                    left: 0; 
+                  }
+            }
          }
     }
 
@@ -135,6 +142,13 @@
         margin: 5%;
         padding-top: 2%;
         padding-bottom: 5%;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.05);
+            transition: .2s;
+            z-index: 99;
+        }
     
         figcaption {
             align-self: flex-start;
@@ -147,7 +161,10 @@
             height: 80%;
             padding-top: 1%;
             object-fit: cover;
+
         }
+
+        
     }
 }
 
@@ -157,6 +174,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     position: sticky;
+    z-index: 100;
     bottom: 0;
     width: 100%;
 
@@ -183,6 +201,7 @@
             .header {
                 grid-column: 1 / 3;
                 position: sticky;
+                z-index: 100;
                 top: 0;
                 width: 100%;
                 background-color: $ColorWithTransparency;
@@ -198,7 +217,7 @@
                         .sortPulldown {
                             padding: 5px 30px;
                             border-radius: 10px;
-                            color: gray;
+                            color: $colorForHeaderFont;
                         }
                     }
                 
@@ -213,32 +232,10 @@
                 
                     .miyasPhoto {
                         font-size: $fontsizeForHeader;
-                
-                        a {
-                            display: block;
-                            margin: 0;
-                            padding: 13px 0;
-                            color: gray;
-                            font-size: $fontsizeForHeader;
-                            font-weight: bold;
-                            line-height: 1;
-                            text-decoration: none;
-                        }
                     }
                 
                     .links {
                         font-size: $fontsizeForHeader;
-                
-                        a {
-                            display: block;
-                            margin: 0;
-                            padding: 13px 0;
-                            color: gray;
-                            font-size: $fontsizeForHeader;
-                            font-weight: bold;
-                            line-height: 1;
-                            text-decoration: none;
-                        }
                     }
                 
                     .profile {
@@ -250,42 +247,62 @@
                         &:hover .dropDownMenu li {
                             overflow: visible;
                             height: 38px;
-                            border-bottom: 1px solid #fff;
+                            // border-bottom: 1px solid #fff;
                         }
                 
-                        a {
-                            display: block;
-                            margin: 0;
-                            padding: 13px 0;
-                            color: gray;
-                            font-size: $fontsizeForHeader;
-                            font-weight: bold;
-                            line-height: 1;
-                            text-decoration: none;
-                        }
                         .dropDownMenu {
                             position: absolute;
                             top: 100%;
                             left: 0;
-                            margin: 0;
+                            margin-top: 15px;
                             padding: 0;
                 
                             li {
                                 overflow: hidden;
                                 width: 200%;
                                 height: 0;
-                                color: gray;
+                                color: $colorForHeaderFont;
                                 transition: .2s;
                             }
                 
                             a {
                                 padding: 13px 15px;
                                 text-align: left;
-                                font-size: $fontsizeForHeader;
+                                font-size: $fontsizeForHeaderDD;
                                 font-weight: normal;
+                                text-decoration: none;
+                                line-height: 1;
                             }
                         }
                      }
+
+                     .mainList {
+                        margin: 0;
+                        padding: 13px 0;
+                        color: $colorForHeaderFont;
+                        font-size: $fontsizeForHeader;
+                        font-weight: bold;
+                        line-height: 1;
+                        text-decoration: none;
+                        position: relative;
+        
+                        &:after {    
+                            background: none repeat scroll 0 0 transparent;
+                            bottom: 0;
+                            content: "";
+                            display: block;
+                            height: 2px;
+                            left: 50%;
+                            position: absolute;
+                            background: $colorForHeaderFont;
+                            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                            width: 0;
+                          }
+                          &:hover:after { 
+                            width: 100%; 
+                            left: 0; 
+                          }
+                    }
                  }
             }
 
@@ -344,6 +361,7 @@
                display: initial;
                grid-column: 1 / 4;
                position: sticky;
+               z-index: 100;
                top: 0;
                width: 100%;
                background-color: $ColorWithTransparency;
@@ -358,7 +376,8 @@
                         .sortPulldown {
                             padding: 5px 30px;
                             border-radius: 10px;
-                            color: gray;
+                            color: $colorForHeaderFont;
+                            cursor: pointer;
                         }
                     }
         
@@ -367,7 +386,8 @@
                         .filterPulldown {
                             padding: 5px 30px;
                             border-radius: 10px;
-                            color: gray;
+                            color: $colorForHeaderFont;
+                            cursor: pointer;
                         }
                     }
 
@@ -409,36 +429,15 @@
                         }
 
                       .miyasPhoto {
-                        font-size: $fontsizeForHeader;
-                
-                        a {
-                            display: block;
-                            margin: 0;
-                            padding: 13px 0;
-                            color: gray;
-                            font-size: $fontsizeForHeader;
-                            font-weight: bold;
-                            line-height: 1;
-                            text-decoration: none;
-                        }
+                        font-size: $fontsizeForHeaderHamMenu;
                     }
                 
                     .links {
-                        font-size: $fontsizeForHeader;
-                
-                        a {
-                            display: block;
-                            margin: 0;
-                            padding: 13px 0;
-                            color: gray;
-                            font-size: $fontsizeForHeader;
-                            font-weight: bold;
-                            line-height: 1;
-                            text-decoration: none;
-                        }
+                        font-size: $fontsizeForHeaderHamMenu;
                     }
                 
                     .profile {
+                        font-size: $fontsizeForHeaderHamMenu;
                         display: inline;
                         position: relative;
                         margin: 0;
@@ -450,7 +449,7 @@
                             top: 0%;
                             left: -90px;
                             // margin: 0;
-                            margin-top: 30px;
+                            margin-top: 40px;
                             padding: 0;
     
                 
@@ -458,14 +457,14 @@
                                 overflow: hidden;
                                 width: 100%;
                                 height: 0;
-                                color: gray;
+                                color: $colorForHeaderFont;
                                 transition: .2s;
                             }
                 
                             a {
                                 padding: 13px 15px;
                                 text-align: left;
-                                font-size: $fontsizeForHeader;
+                                font-size: $fontsizeForHeaderDDHamMenu;
                                 font-weight: normal;
                             }
                         }
@@ -473,7 +472,7 @@
                         &:hover .dropDownMenu li {
                             overflow: visible;
                             height: 38px;
-                            border-bottom: 1px solid #fff;
+                            // border-bottom: 1px solid #fff;
                             // background: $ColorWithTransparency;
                             
                         }
@@ -482,14 +481,47 @@
                             display: block;
                             margin: 0;
                             padding: 13px 0;
-                            color: gray;
+                            color: $colorForHeaderFont;
                             font-size: $fontsizeForHeader;
                             font-weight: bold;
                             line-height: 1;
                             text-decoration: none;
                             // font-weight: normal;
+
+                            &:hover {
+                                font-weight: bold;
+                                transition: .2s;
+                            }
                         }
                      }
+                    }
+                    .mainList {
+                        display: block;
+                        margin: 0;
+                        padding: 13px 0;
+                        color: $colorForHeaderFont;
+                        font-size: $fontsizeForHeader;
+                        font-weight: bold;
+                        line-height: 1;
+                        text-decoration: none;
+                        position: relative;
+
+                        &:after {    
+                            background: none repeat scroll 0 0 transparent;
+                            bottom: 0;
+                            content: "";
+                            // display: block;
+                            height: 2px;
+                            right: 0;
+                            position: absolute;
+                            background: $colorForHeaderFont;
+                            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                            width: 0;
+                          }
+                          &:hover:after { 
+                            width: 20%; 
+                            right: 0; 
+                          }
                     }
                   }
 

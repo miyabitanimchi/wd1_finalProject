@@ -258,7 +258,7 @@ li {
   }
 }
 
-.gridForDescri {
+.modal-body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -266,20 +266,110 @@ li {
   height: 100%;
 }
 
-.gridForDescri .photoDescription {
+.modal-body .photoDescription {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
 }
 
-.gridForDescri .photoDescription img {
-  height: 400px;
-  width: 600px;
+.modal-body .photoDescription img {
+  height: 90%;
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.gridForDescri .descriPart {
+.modal-body .descriPart {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.modal-body .descriPart .titleAndDescri {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-body .descriPart .titleAndDescri h1 {
+  font-size: 2.2em;
+  margin-bottom: 1%;
+}
+
+.modal-body .descriPart .titleAndDescri p {
+  text-align: justify;
+}
+
+.modal-body .descriPart .commentNBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-body .descriPart .commentNBtn span {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.modal-body .descriPart .commentNBtn .comment {
+  font-size: .9em;
+  margin-bottom: 5%;
+}
+
+.modal-body .descriPart .commentNBtn .writeComment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-body .descriPart .commentNBtn .writeComment #commentArea {
+  margin-right: 1%;
+  width: 100%;
+}
+
+.modal-body .descriPart .commentNBtn .writeComment #toComment {
+  border-radius: 10%;
+  background: white;
+}
+
+@media screen and (max-width: 991px) {
+  .modal-body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    height: 100%;
+  }
+  .modal-body .photoDescription {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  .modal-body .descriPart {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  figure {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=photoDescri.css.map */

@@ -11,7 +11,7 @@ $(document).ready(function(){ // Wait until the browser finish to read the html 
             category: "Nature",
             image: "img/mountInFukui.jpg",
             title: "title1 ", //put space
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel lobortis justo. Sed sit amet felis commodo, imperdiet dui sit amet, fermentum nisi. Suspendisse potenti. Donec in pretium justo. Nulla blandit ullamcorper nibh, id sollicitudin libero auctor quis. In eu consectetur turpis, hendrerit mattis sem."
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel lobortis justo. Sed sit amet felis commodo, imperdiet dui sit amet, fermentum nisi. Suspendisse potenti. Donec in pretium justo. Nulla blandit ullamcorper nibh, id sollicitudin libero auctor quis. In eu consectetur turpis, hendrerit mattis sem.",
         },    
         {
             data: "11/18/2020",
@@ -550,19 +550,7 @@ $(document).ready(function(){ // Wait until the browser finish to read the html 
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel lobortis justo. Sed sit amet felis commodo, imperdiet dui sit amet, fermentum nisi. Suspendisse potenti. Donec in pretium justo. Nulla blandit ullamcorper nibh, id sollicitudin libero auctor quis. In eu consectetur turpis, hendrerit mattis sem."
         },
     ]
-
-
-    //create the function and build the page
-
-    function CreateThePage(arr) {
-        var wrap = $(".containerGridPictures") // select the element that we will append the pictures 
-        for(i=0; i< arr.length; i++){
-               // wrap.append("<figure data-bs-toggle='modal'data-bs-target='model1' class='boardForPhotos'><figcaption> Date: " + arr[i].data + "</figcaption> <figcaption> Category: " + arr[i].category + "</figcaption><img src=" + arr[i].image + " />");
-            wrap.append("<figure  class='boardForPhotos'><figcaption class='datePost'> Date: " + arr[i].data + "</figcaption> <figcaption class='category'> Category: " + arr[i].category + "</figcaption><img src=" + arr[i].image + " /> <div class='title'>"+ arr[i].title + "</div><div class='description'>" + arr[i].description + "</div>");
-        }
-    }
-
-
+    
     //Create the page with all pictures
     $(".triggerFilter").on("change", function(){
         var selectedOption = $("triggerFilter").val();
@@ -593,7 +581,7 @@ $(document).ready(function(){ // Wait until the browser finish to read the html 
       }
     })
 
-
+    //function for fake sort
     function SortByDate(arr) {
         var SortArr = arr.reverse();
         return SortArr;
@@ -625,30 +613,15 @@ $(document).ready(function(){ // Wait until the browser finish to read the html 
         }
     });
 
+    //create the function and build the page
 
-    
-
-    // $(".heart").on("click",function(){
-    //    $(".number").replaceWith('<div class="numberPlus1">136</div>'); //add function to plus number
-    //    $(this).toggleClass('activeHeart');
-    // })
-        $(".numberPlus1").hide();
-        $(".heartToUndo").hide();
-    　　$(".heart").on("click", function(){
-            $(".numberPlus1").show();
-            $(".heartToUndo").show();
-            $(this).hide();
-            $(".number").hide();
-
-    });
-
-    $(".heartToUndo").on("click", function(){
-            $(".number").show();
-            $(".heart").show();
-            $(this).hide();
-            $(".numberPlus1").hide();
-    });
-
+    function CreateThePage(arr) {
+        var wrap = $(".containerGridPictures") // select the element that we will append the pictures 
+        for(i=0; i< arr.length; i++){
+               // wrap.append("<figure data-bs-toggle='modal'data-bs-target='model1' class='boardForPhotos'><figcaption> Date: " + arr[i].data + "</figcaption> <figcaption> Category: " + arr[i].category + "</figcaption><img src=" + arr[i].image + " />");
+            wrap.append("<figure  class='boardForPhotos'><figcaption class='datePost'> Date: " + arr[i].data + "</figcaption> <figcaption class='category'> Category: " + arr[i].category + "</figcaption><img src=" + arr[i].image + " /> <div class='title'>"+ arr[i].title + "</div><div class='description'>" + arr[i].description + "</div>");
+        }
+    }
     
 
 
@@ -675,7 +648,7 @@ $(document).ready(function(){ // Wait until the browser finish to read the html 
         var categoryModay = $(".categoryModay");
         var imgModay = $(".imgModal");
         var titleModay = $(".descriPart h1");
-        var descriModay = $(".descriPart p");
+        var descriModay = $(".pDescription");
         //Append the information
         dataModal.empty();
         dataModal.append(dataPost);
@@ -687,4 +660,44 @@ $(document).ready(function(){ // Wait until the browser finish to read the html 
         descriModay.empty();
         descriModay.append(description);
     })
-})
+
+
+    //Function for creating fake like
+    $(".numberPlus1").hide();
+    $(".heartToUndo").hide();
+    
+    $(".heart").on("click", function(){
+            $(".numberPlus1").show();
+            $(".heartToUndo").show();
+            $(this).hide();
+            $(".number").hide();
+
+    });
+
+    $(".heartToUndo").on("click", function(){
+            $(".number").show();
+            $(".heart").show();
+            $(this).hide();
+            $(".numberPlus1").hide();
+    });
+
+    // Append Comments
+    $(function(){
+        $("#toComment").click(function(){
+            $(".appendComment").append($("#commentArea").val());
+        });
+
+
+        //activate the button
+        if ($("#commentArea").val().length == 0) {
+            $("#toComment").prop("disabled", true);
+            }
+            $("#commentArea").on("keydown keyup keypress change", function() {
+            if ($(this).val().length < 1) {
+            $("#toComment").prop("disabled", true);
+            } else {
+            $("#toComment").prop("disabled", false);
+            }
+            });
+    });
+});

@@ -1,7 +1,7 @@
 @import './common';
 @import './style';
 
-.gridForDescri {
+.modal-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100%;
@@ -10,18 +10,81 @@
         grid-column: 1 / 2;
 
         img {
-            height: 400px;
-            width: 600px;
+            height: 90%;
+            width: 90%;
+            object-fit: cover;
         }
     }
 
     .descriPart {
         grid-column: 2 / 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .titleAndDescri {
+            display: flex;
+            flex-direction: column;
+       
+            h1 {
+                font-size: 2.2em;
+                margin-bottom: 1%;
+            }
+
+            p {
+                text-align: justify;
+            }
+        }
+
+        .commentNBtn {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+
+            .comment {
+                font-size: .9em;
+                margin-bottom: 5%;
+            }
+
+            .writeComment {
+                display: flex;
+
+                #commentArea {
+                    margin-right: 1%;
+                    width: 100%;
+                }
+
+                #toComment {
+                    border-radius: 10%;
+                    background: white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .modal-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100%;
+
+        .photoDescription {
+            grid-column: 1 / 2;
+        }
+
+        .descriPart {
+            grid-column: 1 / 2;
+        }
+    }
+
+    figure {
+        margin: 0;
     }
 }
 
 
-// .inMontreal {
-//     height: 400px;
-//     width: 600px;
-// }

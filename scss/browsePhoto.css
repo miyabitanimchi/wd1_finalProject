@@ -193,6 +193,7 @@ li {
   grid-column: 1 / 4;
   position: -webkit-sticky;
   position: sticky;
+  z-index: 100;
   top: 0;
   width: 100%;
   background-color: rgba(255, 248, 193, 0.7);
@@ -212,42 +213,22 @@ li {
   padding: 5px 30px;
   border-radius: 10px;
   color: gray;
+  cursor: pointer;
 }
 
 .gridContainer .header .gridContainerForHeader .filterPd .filterPulldown {
   padding: 5px 30px;
   border-radius: 10px;
   color: gray;
+  cursor: pointer;
 }
 
 .gridContainer .header .gridContainerForHeader .miyasPhoto {
-  font-size: 1.1em;
-}
-
-.gridContainer .header .gridContainerForHeader .miyasPhoto a {
-  display: block;
-  margin: 0;
-  padding: 13px 0;
-  color: gray;
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 1;
-  text-decoration: none;
+  font-size: 1.2em;
 }
 
 .gridContainer .header .gridContainerForHeader .links {
-  font-size: 1.1em;
-}
-
-.gridContainer .header .gridContainerForHeader .links a {
-  display: block;
-  margin: 0;
-  padding: 13px 0;
-  color: gray;
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 1;
-  text-decoration: none;
+  font-size: 1.2em;
 }
 
 .gridContainer .header .gridContainerForHeader .profile {
@@ -255,30 +236,19 @@ li {
   position: relative;
   margin: 0;
   padding: 0;
+  font-size: 1.2em;
 }
 
 .gridContainer .header .gridContainerForHeader .profile:hover .dropDownMenu li {
   overflow: visible;
   height: 38px;
-  border-bottom: 1px solid #fff;
-}
-
-.gridContainer .header .gridContainerForHeader .profile a {
-  display: block;
-  margin: 0;
-  padding: 13px 0;
-  color: gray;
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 1;
-  text-decoration: none;
 }
 
 .gridContainer .header .gridContainerForHeader .profile .dropDownMenu {
   position: absolute;
   top: 100%;
   left: 0;
-  margin: 0;
+  margin-top: 15px;
   padding: 0;
 }
 
@@ -294,8 +264,47 @@ li {
 .gridContainer .header .gridContainerForHeader .profile .dropDownMenu a {
   padding: 13px 15px;
   text-align: left;
-  font-size: 1.1em;
+  color: gray;
+  font-size: 1em;
   font-weight: normal;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.gridContainer .header .gridContainerForHeader .profile .dropDownMenu a:hover {
+  font-weight: bold;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.gridContainer .header .gridContainerForHeader .mainList {
+  margin: 0;
+  padding: 13px 0;
+  color: gray;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+  position: relative;
+}
+
+.gridContainer .header .gridContainerForHeader .mainList:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: gray;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.gridContainer .header .gridContainerForHeader .mainList:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 .gridContainer .headerHamburgerMenu {
@@ -331,6 +340,15 @@ li {
   margin: 5%;
   padding-top: 2%;
   padding-bottom: 5%;
+  cursor: pointer;
+}
+
+.gridContainer .boardForPhotos:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: .2s;
+  transition: .2s;
+  z-index: 99;
 }
 
 .gridContainer .boardForPhotos figcaption {
@@ -355,6 +373,7 @@ li {
   padding-bottom: 20px;
   position: -webkit-sticky;
   position: sticky;
+  z-index: 100;
   bottom: 0;
   width: 100%;
 }
@@ -390,6 +409,7 @@ li {
     grid-column: 1 / 3;
     position: -webkit-sticky;
     position: sticky;
+    z-index: 100;
     top: 0;
     width: 100%;
     background-color: rgba(255, 248, 193, 0.7);
@@ -415,30 +435,10 @@ li {
     color: gray;
   }
   body .gridContainer .header .gridContainerForHeader .miyasPhoto {
-    font-size: 1.1em;
-  }
-  body .gridContainer .header .gridContainerForHeader .miyasPhoto a {
-    display: block;
-    margin: 0;
-    padding: 13px 0;
-    color: gray;
-    font-size: 1.1em;
-    font-weight: bold;
-    line-height: 1;
-    text-decoration: none;
+    font-size: 1.2em;
   }
   body .gridContainer .header .gridContainerForHeader .links {
-    font-size: 1.1em;
-  }
-  body .gridContainer .header .gridContainerForHeader .links a {
-    display: block;
-    margin: 0;
-    padding: 13px 0;
-    color: gray;
-    font-size: 1.1em;
-    font-weight: bold;
-    line-height: 1;
-    text-decoration: none;
+    font-size: 1.2em;
   }
   body .gridContainer .header .gridContainerForHeader .profile {
     display: inline;
@@ -449,23 +449,12 @@ li {
   body .gridContainer .header .gridContainerForHeader .profile:hover .dropDownMenu li {
     overflow: visible;
     height: 38px;
-    border-bottom: 1px solid #fff;
-  }
-  body .gridContainer .header .gridContainerForHeader .profile a {
-    display: block;
-    margin: 0;
-    padding: 13px 0;
-    color: gray;
-    font-size: 1.1em;
-    font-weight: bold;
-    line-height: 1;
-    text-decoration: none;
   }
   body .gridContainer .header .gridContainerForHeader .profile .dropDownMenu {
     position: absolute;
     top: 100%;
     left: 0;
-    margin: 0;
+    margin-top: 15px;
     padding: 0;
   }
   body .gridContainer .header .gridContainerForHeader .profile .dropDownMenu li {
@@ -479,8 +468,37 @@ li {
   body .gridContainer .header .gridContainerForHeader .profile .dropDownMenu a {
     padding: 13px 15px;
     text-align: left;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: normal;
+    text-decoration: none;
+    line-height: 1;
+  }
+  body .gridContainer .header .gridContainerForHeader .mainList {
+    margin: 0;
+    padding: 13px 0;
+    color: gray;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1;
+    text-decoration: none;
+    position: relative;
+  }
+  body .gridContainer .header .gridContainerForHeader .mainList:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: gray;
+    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  body .gridContainer .header .gridContainerForHeader .mainList:hover:after {
+    width: 100%;
+    left: 0;
   }
   body .gridContainer .headerHamburgerMenu {
     display: none;
@@ -554,6 +572,7 @@ li {
     grid-column: 1 / 4;
     position: -webkit-sticky;
     position: sticky;
+    z-index: 100;
     top: 0;
     width: 100%;
     background-color: rgba(255, 248, 193, 0.7);
@@ -571,11 +590,13 @@ li {
     padding: 5px 30px;
     border-radius: 10px;
     color: gray;
+    cursor: pointer;
   }
   body .gridContainer .headerHamburgerMenu .makePulldownInline .filterPd .filterPulldown {
     padding: 5px 30px;
     border-radius: 10px;
     color: gray;
+    cursor: pointer;
   }
   body .gridContainer .headerHamburgerMenu .createHamburgerMenu {
     margin: 0 auto;
@@ -609,30 +630,11 @@ li {
   body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .miyasPhoto {
     font-size: 1.1em;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .miyasPhoto a {
-    display: block;
-    margin: 0;
-    padding: 13px 0;
-    color: gray;
-    font-size: 1.1em;
-    font-weight: bold;
-    line-height: 1;
-    text-decoration: none;
-  }
   body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .links {
     font-size: 1.1em;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .links a {
-    display: block;
-    margin: 0;
-    padding: 13px 0;
-    color: gray;
-    font-size: 1.1em;
-    font-weight: bold;
-    line-height: 1;
-    text-decoration: none;
-  }
   body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile {
+    font-size: 1.1em;
     display: inline;
     position: relative;
     margin: 0;
@@ -643,7 +645,7 @@ li {
     position: absolute;
     top: 0%;
     left: -90px;
-    margin-top: 30px;
+    margin-top: 40px;
     padding: 0;
   }
   body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile .dropDownMenu li {
@@ -657,23 +659,54 @@ li {
   body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile .dropDownMenu a {
     padding: 13px 15px;
     text-align: left;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: normal;
   }
   body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile:hover .dropDownMenu li {
     overflow: visible;
     height: 38px;
-    border-bottom: 1px solid #fff;
   }
   body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile a {
     display: block;
     margin: 0;
     padding: 13px 0;
     color: gray;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: bold;
     line-height: 1;
     text-decoration: none;
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile a:hover {
+    font-weight: bold;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav .mainList {
+    display: block;
+    margin: 0;
+    padding: 13px 0;
+    color: gray;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1;
+    text-decoration: none;
+    position: relative;
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav .mainList:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    right: 0;
+    position: absolute;
+    background: gray;
+    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav .mainList:hover:after {
+    width: 20%;
+    right: 0;
   }
   body .gridContainer .headerHamburgerMenu .createHamburgerMenu #nav-input:checked ~ nav {
     display: block;

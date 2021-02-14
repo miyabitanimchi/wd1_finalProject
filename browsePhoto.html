@@ -18,11 +18,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/browsePhoto.js"></script>
 
-    <!--fancybox-->
-    <!-- <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-    <script type="text/javascript" src="/fancybox/jquery.easing-1.4.pack.js"></script>
-    <script type="text/javascript" src="/fancybox/jquery.mousewheel-3.0.4.pack.js"></script> -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 </head>
@@ -45,10 +40,10 @@
                         <option value="food">Food</option>
                     </select>
                 </li>
-                <li class="miyasPhoto"><a href="./browsePhoto.html">My photos</a></li>
-                <li class="links"><a href="#">Links</a></li>
+                <li class="miyasPhoto"><a class="mainList" href="./browsePhoto.html">My photos</a></li>
+                <li class="links"><a class="mainList" href="#">Links</a></li>
                 <li class="profile">
-                    <a href="./profile.html">Miyabi</a>
+                    <a class="mainList" href="./profile.html">Miyabi</a>
                     <ul class="dropDownMenu">
                         <li><a href="#">Settings</a></li>
                         <li><a href="#">Log out</a></li>
@@ -78,13 +73,13 @@
                 <label id="menubtn" for="nav-input"><img src="./img/hamburgerMenu.png" alt="hamburgerMenu"></label>
                 <nav>
                     <ul class="mobile_menu">
-                        <li class="miyasPhoto"><a href="./browsePhoto.html">My photos</a></li>
-                        <li class="links"><a href="#">Links</a></li>
+                        <li class="miyasPhoto"><a class="mainList" href="./browsePhoto.html">My photos</a></li>
+                        <li class="links"><a class="mainList" href="#">Links</a></li>
                         <li class="profile">
-                            <a href="./profile.html">Miyabi</a>
+                            <a class="mainList" href="./profile.html">Miyabi</a>
                             <ul class="dropDownMenu">
-                                <li><a href="#">Settings</a></li>
-                                <li><a href="#">Log out</a></li>
+                                <li><a class="dropDownList" href="#">Settings</a></li>
+                                <li><a class="dropDownList" href="#">Log out</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -113,7 +108,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div> -->
         <div class="modal-body">
-            <div class="gridForDescri">
+            <!-- <div class="gridForDescri"> -->
                 <div class="photoDescription">
                     <div class="photoPart">
                         <figure class="boardForPhotos">
@@ -130,24 +125,31 @@
                     </div>
                 </div>
                 <div class="descriPart">
-                    <h1></h1>
-                    <p>
-                        Description Description Description Description Description 
-                        Description Description Description Description Description 
-                        Description Description Description Description Description 
-                        Description Description Description Description Description 
-                        Description Description Description Description Description 
-                        Description Description Description Description Description 
-                    </p>
-                    <div class="comment">
-                        Comment Comment Comment Comment Comment Comment Comment 
-                        Comment Comment Comment Comment Comment Comment Comment 
-                        Comment Comment Comment Comment Comment Comment Comment 
-                        Comment Comment Comment Comment Comment Comment Comment 
+                    <div class="titleAndDescri">
+                        <h1></h1>
+                        <p class="pDescription">
+                            Description Description Description Description Description 
+                            Description Description Description Description Description 
+                            Description Description Description Description Description 
+                            Description Description Description Description Description 
+                            Description Description Description Description Description 
+                            Description Description Description Description Description 
+                        </p>
                     </div>
-                    <button class="toComment">Comment this photo</button>
+                    <div class="commentNBtn">
+                        <span>Comment:</span>
+                        <div class="comment">
+                            <p>Pretty! :)</p>
+                            <p class="appendComment"></p>
+                        </div>
+                        <div class="writeComment">
+                            <input type="text" id="commentArea" placeholder="Comment this photo">
+                            <!-- <textarea name="commentArea" id="commentArea" cols="50" rows="1" placeholder="Comment this photo"></textarea> -->
+                            <button id="toComment">Send</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
         <!-- <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

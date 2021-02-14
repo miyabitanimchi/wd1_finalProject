@@ -216,7 +216,7 @@ li {
 }
 
 .gridForProfile .header .gridContainerForHeader .miyasPhoto {
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 .gridForProfile .header .gridContainerForHeader .miyasPhoto a {
@@ -224,14 +224,14 @@ li {
   margin: 0;
   padding: 13px 0;
   color: gray;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1;
   text-decoration: none;
 }
 
 .gridForProfile .header .gridContainerForHeader .links {
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 .gridForProfile .header .gridContainerForHeader .links a {
@@ -239,7 +239,7 @@ li {
   margin: 0;
   padding: 13px 0;
   color: gray;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1;
   text-decoration: none;
@@ -263,7 +263,7 @@ li {
   margin: 0;
   padding: 13px 0;
   color: gray;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1;
   text-decoration: none;
@@ -289,7 +289,7 @@ li {
 .gridForProfile .header .gridContainerForHeader .profile .dropDownMenu a {
   padding: 13px 15px;
   text-align: left;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: normal;
 }
 
