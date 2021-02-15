@@ -166,6 +166,214 @@
   }
 }
 
+@-webkit-keyframes buttonTransparent {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes buttonTransparent {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scaleNOpacity1 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity1 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scaleNOpacity2 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    top: 50%;
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity2 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    top: 50%;
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scaleNOpacity3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scaleNOpacity4 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    left: -100%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity4 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    left: -100%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scaleNOpacity5 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    bottom: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity5 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    bottom: 100%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scaleNOpacity6 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    bottom: 100%;
+    left: -100%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity6 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    bottom: 100%;
+    left: -100%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes sacaleThePage {
+  0% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: .5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes sacaleThePage {
+  0% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: .5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -259,6 +467,110 @@ li {
   }
 }
 
+@keyframes buttonTransparent {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity1 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity2 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    top: 50%;
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity4 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    left: -100%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity5 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    bottom: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity6 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    bottom: 100%;
+    left: -100%;
+    opacity: 0;
+  }
+}
+
+@keyframes sacaleThePage {
+  0% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: .5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .makeSomeAnimation {
   position: relative;
 }
@@ -272,6 +584,12 @@ li {
           animation-duration: 1s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+}
+
+.makeSomeAnimation .opacityForh1 {
+  opacity: 0;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
 }
 
 .makeSomeAnimation .clutteredWithPhotos {
@@ -487,6 +805,69 @@ li {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .makeButtonTransparent {
+  -webkit-animation-name: buttonTransparent;
+          animation-name: buttonTransparent;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .scale1 {
+  -webkit-animation-name: scaleNOpacity1;
+          animation-name: scaleNOpacity1;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .scale2 {
+  -webkit-animation-name: scaleNOpacity2;
+          animation-name: scaleNOpacity2;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .scale3 {
+  -webkit-animation-name: scaleNOpacity3;
+          animation-name: scaleNOpacity3;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .scale4 {
+  -webkit-animation-name: scaleNOpacity4;
+          animation-name: scaleNOpacity4;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .scale5 {
+  -webkit-animation-name: scaleNOpacity5;
+          animation-name: scaleNOpacity5;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.makeSomeAnimation .clutteredWithPhotos .scale6 {
+  -webkit-animation-name: scaleNOpacity6;
+          animation-name: scaleNOpacity6;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 .makeSomeAnimation .clutteredWithPhotos #toStart {

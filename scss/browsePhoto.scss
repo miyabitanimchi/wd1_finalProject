@@ -1,5 +1,12 @@
 @import './common';
+@import './style';
 
+//animation when jump to the main page
+.scaleAll {
+    animation-name: sacaleThePage;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
 
 .gridContainer {
     display: grid;
@@ -581,11 +588,4 @@
 
  .description {
      display: none;
- }
-
- .heart{
-     cursor: pointer;
- }
- .heartToUndo {
-     color: red !important;
  }

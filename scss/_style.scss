@@ -110,3 +110,94 @@ $fontFamilyForStart: 'Barlow Condensed', sans-serif;
     }
 }
 
+@keyframes buttonTransparent {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scaleNOpacity1 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(6);
+        opacity: 0;
+    }
+}
+
+@keyframes scaleNOpacity2 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(6);
+        top: 50%;
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes scaleNOpacity3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(6);
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes scaleNOpacity4 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(6);
+        left: -100%;
+        opacity: 0;
+    }
+}
+
+@keyframes scaleNOpacity5 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(6);
+        bottom: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes scaleNOpacity6 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(6);
+        bottom: 100%;
+        left: -100%;
+        opacity: 0;
+    }
+}
+
+
+//scale the main page
+@keyframes sacaleThePage {
+    0% {
+        transform: scale(1.2);
+        opacity: .5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -14,6 +14,11 @@
         animation-iteration-count: 1;
     }
 
+    .opacityForh1 {
+        opacity: 0;
+        transition: 1.5s;
+    }
+
     .clutteredWithPhotos {
         position: relative;
         height: 100%;
@@ -145,7 +150,7 @@
             transform: rotate(20deg);
         }
 
-         // Animation with Jquery
+         // Animation with Jquery ↓
         .activeForCamera {
             animation-name: takeAPhoto;
             animation-duration: .3s;
@@ -177,8 +182,53 @@
             animation-duration: 1s;
             animation-iteration-count: infinite;
             animation-timing-function: ease-in-out;
-    }
-    //Animiayion with Jquery
+        }
+
+
+        //after clicked
+
+        .makeButtonTransparent {
+            animation-name: buttonTransparent;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+        }
+
+        .scale1 {
+            animation-name: scaleNOpacity1;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+        }
+
+        .scale2 {
+            animation-name: scaleNOpacity2;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+        }
+
+        .scale3 {
+            animation-name: scaleNOpacity3;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+        }
+
+        .scale4 {
+            animation-name: scaleNOpacity4;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+        }
+
+        .scale5 {
+            animation-name: scaleNOpacity5;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+        }
+
+        .scale6 {
+            animation-name: scaleNOpacity6;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+        }
+    //Animation with Jquery ↑
 
         
 

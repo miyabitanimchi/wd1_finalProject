@@ -3,6 +3,7 @@ $(document).ready(function(){ // Wait until the browser finish to read the html 
 
     $(function(){
         $("body").hide().fadeIn(1000);
+        $(".boardForPhotos").addClass("scaleAll");
     });
 
     var allPicture = [ // all categories
@@ -631,7 +632,7 @@ $(document).ready(function(){ // Wait until the browser finish to read the html 
         //text() function will return all text (string) that we have inside the element
         //split() will return a array of string
         //find() will try to find the element that you choose inside the element
-
+        $(".boardForPhotos").removeClass("scaleAll");
 
         var dataPost = $(this).find(".datePost").text();
         var categoryPost = $(this).find(".category").text();
@@ -685,6 +686,7 @@ $(document).ready(function(){ // Wait until the browser finish to read the html 
     $(function(){
         $("#toComment").click(function(){
             $(".appendComment").append($("#commentArea").val());
+            $("#commentArea").val("");  //to clear the comment area
         });
 
 
