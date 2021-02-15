@@ -3,7 +3,7 @@
 
 //animation when jump to the main page
 .scaleAll {
-    animation-name: sacaleThePage;
+    animation-name: scaleThePage;
     animation-iteration-count: 1;
     animation-duration: 1s;
 }
@@ -189,10 +189,10 @@
     .postButton {
         background: linear-gradient(to right, #ed213a, #93291e);
         color: #ffeadb;
-        font-family: $fontFamily;
+        font-family: $fontFamilyForStart;
         padding: 15px 50px;
         border-radius: 30px;
-        font-size: 1.1em;
+        font-size: 1.3em;
     }
 }
 

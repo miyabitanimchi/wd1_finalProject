@@ -4,14 +4,21 @@ $(document).ready(function(){
         $("body").hide().fadeIn(1000);
     });
 
-    
+
+    $(".randomFace").hide();
 
     $("#toStart").hover(function(){
-        $(".flash").addClass("activeForFlash")
+        $(".flash").addClass("activeForFlash");
         $(".utsurundesu").addClass("activeForCamera");
         $(".running, .marlion, .goodFriends, .keithResting, .hydrangea, .blueSky").addClass("active1");
         $(".sunsetInSg, .cheers, .giraffe").addClass("active2");
         $(".karaoke, .noto").addClass("active3");
+
+        $(".defaultSmile").hide();
+        
+        var random = Math.floor(Math.random()*$(".randomFace").length);
+        $(".randomFace").hide().eq(random).show();
+        
     });
 
     $("#toStart").mouseleave(function(){
@@ -20,6 +27,8 @@ $(document).ready(function(){
         $(".running, .marlion, .goodFriends, .keithResting, .hydrangea, .blueSky").removeClass("active1");
         $(".sunsetInSg, .cheers, .giraffe").removeClass("active2");
         $(".karaoke, .noto").removeClass("active3");
+        $(".defaultSmile").show();
+        $(".randomFace").hide();
     });
 
     $("#toStart").on("click",function() {

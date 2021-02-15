@@ -347,7 +347,63 @@
   }
 }
 
-@-webkit-keyframes sacaleThePage {
+@-webkit-keyframes fallingDown1 {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: -20%;
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: 200%;
+    opacity: 0;
+  }
+}
+
+@keyframes fallingDown1 {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: -20%;
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: 200%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scaleThePage {
   0% {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
@@ -360,7 +416,7 @@
   }
 }
 
-@keyframes sacaleThePage {
+@keyframes scaleThePage {
   0% {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
@@ -557,7 +613,35 @@ li {
   }
 }
 
-@keyframes sacaleThePage {
+@keyframes fallingDown1 {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: -20%;
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: 200%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleThePage {
   0% {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
@@ -571,8 +655,8 @@ li {
 }
 
 .scaleAll {
-  -webkit-animation-name: sacaleThePage;
-          animation-name: sacaleThePage;
+  -webkit-animation-name: scaleThePage;
+          animation-name: scaleThePage;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-duration: 1s;
@@ -628,11 +712,11 @@ li {
 }
 
 .gridContainer .header .gridContainerForHeader .miyasPhoto {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .gridContainer .header .gridContainerForHeader .links {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .gridContainer .header .gridContainerForHeader .profile {
@@ -640,7 +724,7 @@ li {
   position: relative;
   margin: 0;
   padding: 0;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .gridContainer .header .gridContainerForHeader .profile:hover .dropDownMenu li {
@@ -685,7 +769,7 @@ li {
   margin: 0;
   padding: 13px 0;
   color: gray;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bold;
   line-height: 1;
   text-decoration: none;
@@ -786,10 +870,10 @@ li {
   background: -webkit-gradient(linear, left top, right top, from(#ed213a), to(#93291e));
   background: linear-gradient(to right, #ed213a, #93291e);
   color: #ffeadb;
-  font-family: "Potta One", cursive;
+  font-family: "Barlow Condensed", sans-serif;
   padding: 15px 50px;
   border-radius: 30px;
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 
 @media screen and (max-width: 1100px) {
@@ -839,10 +923,10 @@ li {
     color: gray;
   }
   body .gridContainer .header .gridContainerForHeader .miyasPhoto {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   body .gridContainer .header .gridContainerForHeader .links {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   body .gridContainer .header .gridContainerForHeader .profile {
     display: inline;
@@ -881,7 +965,7 @@ li {
     margin: 0;
     padding: 13px 0;
     color: gray;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
     line-height: 1;
     text-decoration: none;
@@ -1075,7 +1159,7 @@ li {
     margin: 0;
     padding: 13px 0;
     color: gray;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
     line-height: 1;
     text-decoration: none;
@@ -1090,7 +1174,7 @@ li {
     margin: 0;
     padding: 13px 0;
     color: gray;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
     line-height: 1;
     text-decoration: none;

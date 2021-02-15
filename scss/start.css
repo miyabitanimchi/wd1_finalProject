@@ -348,7 +348,63 @@
   }
 }
 
-@-webkit-keyframes sacaleThePage {
+@-webkit-keyframes fallingDown1 {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: -20%;
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: 200%;
+    opacity: 0;
+  }
+}
+
+@keyframes fallingDown1 {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: -20%;
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: 200%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scaleThePage {
   0% {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
@@ -361,7 +417,7 @@
   }
 }
 
-@keyframes sacaleThePage {
+@keyframes scaleThePage {
   0% {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
@@ -558,7 +614,35 @@ li {
   }
 }
 
-@keyframes sacaleThePage {
+@keyframes fallingDown1 {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: -20%;
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: 200%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleThePage {
   0% {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
@@ -584,6 +668,7 @@ li {
           animation-duration: 1s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  z-index: 1000 !important;
 }
 
 .makeSomeAnimation .opacityForh1 {
@@ -759,8 +844,8 @@ li {
 .makeSomeAnimation .clutteredWithPhotos .activeForCamera {
   -webkit-animation-name: takeAPhoto;
           animation-name: takeAPhoto;
-  -webkit-animation-duration: .3s;
-          animation-duration: .3s;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
@@ -768,8 +853,8 @@ li {
 .makeSomeAnimation .clutteredWithPhotos .activeForFlash {
   -webkit-animation-name: flashScale;
           animation-name: flashScale;
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
@@ -891,9 +976,109 @@ li {
 }
 
 .makeSomeAnimation .clutteredWithPhotos #toStart:hover {
-  -webkit-transform: translate(-50%, -50%) scale(1.2);
-          transform: translate(-50%, -50%) scale(1.2);
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+          transform: translate(-50%, -50%) scale(1.1);
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+@media screen and (max-width: 1299px) {
+  .utsurundesu {
+    width: 500px;
+    height: 230px;
+    left: -30% !important;
+  }
+  .flashForCamera {
+    top: -17% !important;
+  }
+  .flashForCamera .flash {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .flashForCamera .flash::before, .flashForCamera .flash::after {
+    height: 80px !important;
+    width: 80px !important;
+  }
+  .running, .sunsetInSg, .karaoke, .marlion,
+  .noto, .goodFriends, .keithResting, .cheers,
+  .hydrangea, .giraffe, .blueSky {
+    height: 250px !important;
+    width: 375px !important;
+  }
+}
+
+@media screen and (max-width: 1129px) {
+  .utsurundesu {
+    width: 400px;
+    height: 184px;
+    left: -25% !important;
+  }
+  .flashForCamera {
+    top: -15% !important;
+    left: 15% !important;
+  }
+  .flashForCamera .flash {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .flashForCamera .flash::before, .flashForCamera .flash::after {
+    height: 60px !important;
+    width: 60px !important;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .utsurundesu {
+    width: 350px;
+    height: 161px;
+    top: -15%;
+    left: -27% !important;
+  }
+  .flashForCamera {
+    left: 12% !important;
+  }
+  .flashForCamera .flash {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .flashForCamera .flash::before, .flashForCamera .flash::after {
+    height: 50px !important;
+    width: 50px !important;
+  }
+  .running, .sunsetInSg, .karaoke, .marlion,
+  .noto, .goodFriends, .keithResting, .cheers,
+  .hydrangea, .giraffe, .blueSky {
+    height: 200px !important;
+    width: 300px !important;
+  }
+}
+
+@media screen and (max-width: 879px) {
+  body {
+    width: 100% !important;
+  }
+  .utsurundesu {
+    display: none;
+  }
+  .flashForCamera {
+    display: none;
+  }
+  .running, .sunsetInSg, .karaoke, .marlion,
+  .noto, .goodFriends, .keithResting, .cheers,
+  .hydrangea, .giraffe, .blueSky {
+    height: 200px !important;
+    width: 300px !important;
+    z-index: 0 !important;
+  }
+  .running {
+    -webkit-animation-name: fallingDown1 !important;
+            animation-name: fallingDown1 !important;
+    -webkit-animation-duration: 10s !important;
+            animation-duration: 10s !important;
+    -webkit-animation-iteration-count: infinite !important;
+            animation-iteration-count: infinite !important;
+    -webkit-transition-property: top;
+    transition-property: top;
+  }
 }
 /*# sourceMappingURL=start.css.map */
