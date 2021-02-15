@@ -1269,12 +1269,7 @@ li {
   display: none;
 }
 
-.modal-body {
-  -ms-grid-columns: 1fr !important;
-      grid-template-columns: 1fr !important;
-}
-
-.modal-body .postAPhoto {
+.postAPhoto {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1284,9 +1279,12 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
 }
 
-.modal-body .postAPhoto .dnd {
+.postAPhoto .dnd {
   position: relative;
   border: dotted 1px gray;
   border-radius: 20px;
@@ -1294,17 +1292,17 @@ li {
   height: 350px;
 }
 
-.modal-body .postAPhoto .dnd #input_file {
+.postAPhoto .dnd #input_file {
   width: 500px;
   height: 350px;
   opacity: 0;
 }
 
-.modal-body .postAPhoto .dnd #input_file #input_file:focus {
+.postAPhoto .dnd #input_file #input_file:focus {
   opacity: 1;
 }
 
-.modal-body .postAPhoto .dnd #preview_field {
+.postAPhoto .dnd #preview_field {
   position: absolute;
   top: 0;
   left: 0;
@@ -1314,13 +1312,13 @@ li {
      object-fit: cover;
 }
 
-.modal-body .postAPhoto .dnd #preview_field img {
+.postAPhoto .dnd #preview_field img {
   width: 500px;
   height: 350px;
   border-radius: 20px;
 }
 
-.modal-body .postAPhoto .dnd #drop_area {
+.postAPhoto .dnd #drop_area {
   position: absolute;
   top: 0;
   left: 0;
@@ -1329,13 +1327,13 @@ li {
   cursor: pointer;
 }
 
-.modal-body .postAPhoto .dnd #drop_area p {
+.postAPhoto .dnd #drop_area p {
   text-align: center;
   padding-top: 10%;
   font-size: 1.2em;
 }
 
-.modal-body .postAPhoto .dnd #icon_clear_button {
+.postAPhoto .dnd #icon_clear_button {
   display: none;
   position: absolute;
   cursor: pointer;
@@ -1346,75 +1344,88 @@ li {
   padding-right: 5px;
 }
 
-.modal-body .postAPhoto .infoToPost {
+.postAPhoto .infoToPost {
   padding-top: 1%;
   display: block;
 }
 
-.modal-body .postAPhoto .infoToPost .chooseDate {
+.postAPhoto .infoToPost .chooseDate {
   font-size: 1.1em;
   margin-bottom: 3%;
 }
 
-.modal-body .postAPhoto .infoToPost .chooseDate label {
+.postAPhoto .infoToPost .chooseDate label {
   padding-right: 2%;
 }
 
-.modal-body .postAPhoto .infoToPost .chooseDate #date {
+.postAPhoto .infoToPost .chooseDate #date {
   padding: 1% 3%;
   border-radius: 10px;
   outline: none;
 }
 
-.modal-body .postAPhoto .infoToPost .categoryArea {
+.postAPhoto .infoToPost .categoryArea {
   font-size: 1.1em;
   margin-bottom: 1%;
 }
 
-.modal-body .postAPhoto .infoToPost .categoryArea label {
+.postAPhoto .infoToPost .categoryArea label {
   padding-right: 2%;
 }
 
-.modal-body .postAPhoto .infoToPost .categoryArea #filter {
+.postAPhoto .infoToPost .categoryArea #filter {
   padding: 1% 3%;
   border-radius: 7px;
 }
 
-.modal-body .postAPhoto .infoToPost .newCategoryArea {
+.postAPhoto .infoToPost .newCategoryArea {
   margin-bottom: 5%;
 }
 
-.modal-body .postAPhoto .infoToPost .newCategoryArea #newCategory {
+.postAPhoto .infoToPost .newCategoryArea #newCategory {
   border-radius: 3px;
   outline: none;
 }
 
-.modal-body .postAPhoto .infoToPost .putTitle {
+.postAPhoto .infoToPost .putTitle {
   margin-bottom: 1%;
 }
 
-.modal-body .postAPhoto .infoToPost .putTitle label {
+.postAPhoto .infoToPost .putTitle label {
   font-size: 1.1em;
 }
 
-.modal-body .postAPhoto .infoToPost .putTitle #title {
+.postAPhoto .infoToPost .putTitle #title {
   width: 100%;
   font-size: 1.1em;
   border-radius: 5px;
 }
 
-.modal-body .postAPhoto .infoToPost .putDescription {
+.postAPhoto .infoToPost .putDescription {
   margin-bottom: 3%;
 }
 
-.modal-body .postAPhoto .infoToPost .putDescription label {
+.postAPhoto .infoToPost .putDescription label {
   font-size: 1.1em;
 }
 
-.modal-body .postAPhoto .infoToPost .toPost {
+.postAPhoto .infoToPost .toPost {
   width: 100%;
   padding: 2% 0;
   border-radius: 15px;
   outline: none;
+}
+
+.modal-content {
+  border-radius: 20px !important;
+}
+
+@media screen and (max-width: 1199px) {
+  .postAPhoto {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=browsePhoto.css.map */
