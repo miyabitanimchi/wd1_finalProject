@@ -2,9 +2,25 @@
 @import './style';
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
 
+
+
+
 .makeSomeAnimation {
     position: relative;
+
+    .logOut {
+        float: right;
+        // width: 100%;
+        margin-right: 10px;
+        margin-top: 5px;
     
+        a {
+            font-family: $fontFamilyForStart;
+            color:black;
+            font-size: 1.3em;
+            
+        }
+    }
     
     h1 {
         text-align: center;
@@ -12,9 +28,9 @@
         animation-name: animeForTitle;
         animation-duration: 1s;
         animation-iteration-count: 1;
-        z-index: 1000 !important;
     }
 
+    //jquery  when clicked
     .opacityForh1 {
         opacity: 0;
         transition: 1.5s;
@@ -360,20 +376,66 @@
     }
 
     .running {
-        animation-name: fallingDown1 !important;
-        animation-duration: 10s !important;
-        animation-iteration-count: infinite !important;
-        transition-property: top;
+        left: 68% !important;
+        @include photoFallingDown;
     }
 
-    // .sunsetInSg {
-    //     top: -70% !important;
-    //     left: 50% !important;
-    // }
+    .sunsetInSg {
+        animation-delay: -3.5s;
+        @include photoFallingDown;
+    }
 
-    // .karaoke {
-    //     top: -80% !important;
-    //     left: 100% !important;
-    // }
+    .karaoke {
+        left: 20% !important;
+        animation-delay: -1s;
+        @include photoFallingDown;
+    }
+
+    .marlion {
+        animation-delay: -1.5s;
+        @include photoFallingDown;
+    }
+
+    .noto {
+        left: 10% !important;
+        animation-delay: -2s;
+        @include photoFallingDown;
+    }
+
+    .goodFriends {
+        left: 30% !important;
+        animation-delay: -.3s;
+        @include photoFallingDown;
+    }
+
+    .keithResting {
+        left: 0 !important;
+        animation-delay: -4s;
+        @include photoFallingDown;
+    }
+
+    .cheers {
+        left: 0 !important;
+        animation-delay: -7.5s;
+        @include photoFallingDown;
+    }
+
+    .hydrangea {
+        left: 25% !important;
+        animation-delay: -5s;
+        @include photoFallingDown;
+    }
+
+    .giraffe {
+        left: 70% !important;
+        animation-delay: -6s;
+        @include photoFallingDown;
+    }
+
+    .blueSky {
+        left: 65% !important;
+        animation-delay: -4.5s;
+        @include photoFallingDown;
+    }
 }
 

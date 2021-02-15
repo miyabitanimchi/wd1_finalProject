@@ -187,8 +187,7 @@ $fontFamilyForStart: 'Barlow Condensed', sans-serif;
     }
 }
 
-//when less than 880px
-
+//when less than 880px ↓
 @keyframes fallingDown1 {
     0% {
         transform: rotate(10deg);
@@ -208,10 +207,17 @@ $fontFamilyForStart: 'Barlow Condensed', sans-serif;
     }
     100% {
         transform: rotate(10deg);
-        top: 200%;
+        top: 150%;
         opacity: 0;
     }
 }
+
+@mixin photoFallingDown {
+    animation-name: fallingDown1;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+//when less than 880px ↑
 
 
 //scale the main page

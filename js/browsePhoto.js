@@ -702,4 +702,105 @@ $(document).ready(function(){ // Wait until the browser finish to read the html 
             }
             });
     });
+
+
+
+    //post a photo
+    $(function() {
+        $("#drop_area").on("click", function() {
+            $("#input_file").click();
+        });
+
+    $("#input_file").on("change", function() {
+        //when more than one file were chosen 
+        if (this.files.length > 1) {
+            aleart("Only one photo will be aploaded");
+            $("#input_file").val("");
+            return;
+        }
+        handleFiles(this.files);
+    });
+
+    });
+
+    //when a file gets in a drag and drop area
+    $("#drop_area").on("dragenter dragover", function(event) {
+        event.stopPropagation();
+        event.preventDefault();
+        $("#drop_area").css("border", "1px solid #333"); //make the line solid
+        $("#drop_area").css("border-radius", "20px");
+    });
+
+    //when the file chosen is away from the dnd area
+    $("#drop_area").on("dragleave", function(event) {
+        event.stopPropagation();
+        event.preventDefault();
+        $("#drop_area").css("border", "1px dashed #aaa");
+    });
+
+    //when the file is droped down
+    $("#drop_area").on("drop", function(event) {
+        event.preventDefault();
+
+        $("#input_file")[0].files = event.originalEvent.dataTransfer.files;
+
+        //when more than one file were chosen
+        if ($("#input_file")[0].files.length > 1) {
+            alert("Only one photo can be uploaded");
+            $("#input_file").val("");
+            return;
+        }
+        handleFiles($("#input_file")[0].files);
+    })
+
+    //control the file draged
+    function handleFiles(files) {
+        var file = files[0];
+        var imageType = "image.*";
+
+        //check if the file is img
+        if(! file.type.match(imageType)) {
+            alert("Choose an image file");
+            $("#input_file").val("");
+            $("#drop_area").css("border", "1px dashed #aaa");
+            return;
+        }
+
+    $("#drop_area").hide();  //hide the drop area
+    $("#icon_clear_button").show(); //show icon_clear_button
+
+    var img = document.createElement("img"); //create img element
+    var reader = new FileReader();
+    reader.onload = function () { //when it finishes reading,
+        img.src = reader.result; //the result of readAsDataURL is the result
+        $("#preview_field").append(img); //show the image on the preview field
+    }
+    reader.readAsDataURL(file); //start reading asynchronously in the background
+
+    }
+
+    $("#icon_clear_button").on("click", function () {
+    $("#preview_field").empty(); //remove the img file
+    $("#input_file").val(""); //remove the content in the input file
+    $("#drop_area").show(); //show the drop area on the top
+    $("#icon_clear_button").hide(); //hide the icon_clear_button
+    $("#drop_area").css("border", "1px dashed #aaa"); //change the solid line to the dashed
+    })
+
+    //prevent to open any a file when dropped on a different field
+    $(document).on('dragenter', function (event) {
+    event.stopPropagation();
+    event.preventDefault();
+    });
+    $(document).on('dragover', function (event) {
+    event.stopPropagation();
+    event.preventDefault();
+    });
+    $(document).on('drop', function (event) {
+    event.stopPropagation();
+    event.preventDefault();
+    });
+
+
+
 });

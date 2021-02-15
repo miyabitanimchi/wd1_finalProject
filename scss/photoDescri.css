@@ -370,7 +370,7 @@
   100% {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
-    top: 200%;
+    top: 150%;
     opacity: 0;
   }
 }
@@ -398,7 +398,7 @@
   100% {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
-    top: 200%;
+    top: 150%;
     opacity: 0;
   }
 }
@@ -636,7 +636,7 @@ li {
   100% {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
-    top: 200%;
+    top: 150%;
     opacity: 0;
   }
 }
@@ -684,6 +684,7 @@ li {
 .modal-body .photoDescription .like .heart, .modal-body .photoDescription .like .heartToUndo {
   cursor: pointer;
   font-size: 1.2em;
+  margin-right: 3px;
 }
 
 .modal-body .photoDescription .like .heartToUndo {

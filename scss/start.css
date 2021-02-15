@@ -371,7 +371,7 @@
   100% {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
-    top: 200%;
+    top: 150%;
     opacity: 0;
   }
 }
@@ -399,7 +399,7 @@
   100% {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
-    top: 200%;
+    top: 150%;
     opacity: 0;
   }
 }
@@ -637,7 +637,7 @@ li {
   100% {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
-    top: 200%;
+    top: 150%;
     opacity: 0;
   }
 }
@@ -659,6 +659,18 @@ li {
   position: relative;
 }
 
+.makeSomeAnimation .logOut {
+  float: right;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.makeSomeAnimation .logOut a {
+  font-family: "Barlow Condensed", sans-serif;
+  color: black;
+  font-size: 1.3em;
+}
+
 .makeSomeAnimation h1 {
   text-align: center;
   font-family: "Barlow Condensed", sans-serif;
@@ -668,7 +680,6 @@ li {
           animation-duration: 1s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  z-index: 1000 !important;
 }
 
 .makeSomeAnimation .opacityForh1 {
@@ -1071,14 +1082,121 @@ li {
     z-index: 0 !important;
   }
   .running {
-    -webkit-animation-name: fallingDown1 !important;
-            animation-name: fallingDown1 !important;
-    -webkit-animation-duration: 10s !important;
-            animation-duration: 10s !important;
-    -webkit-animation-iteration-count: infinite !important;
-            animation-iteration-count: infinite !important;
-    -webkit-transition-property: top;
-    transition-property: top;
+    left: 68% !important;
+    -webkit-animation-name: fallingDown1;
+            animation-name: fallingDown1;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  .sunsetInSg {
+    -webkit-animation-delay: -3.5s;
+            animation-delay: -3.5s;
+    -webkit-animation-name: fallingDown1;
+            animation-name: fallingDown1;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  .karaoke {
+    left: 20% !important;
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s;
+    -webkit-animation-name: fallingDown1;
+            animation-name: fallingDown1;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  .marlion {
+    -webkit-animation-delay: -1.5s;
+            animation-delay: -1.5s;
+    -webkit-animation-name: fallingDown1;
+            animation-name: fallingDown1;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  .noto {
+    left: 10% !important;
+    -webkit-animation-delay: -2s;
+            animation-delay: -2s;
+    -webkit-animation-name: fallingDown1;
+            animation-name: fallingDown1;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  .goodFriends {
+    left: 30% !important;
+    -webkit-animation-delay: -.3s;
+            animation-delay: -.3s;
+    -webkit-animation-name: fallingDown1;
+            animation-name: fallingDown1;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  .keithResting {
+    left: 0 !important;
+    -webkit-animation-delay: -4s;
+            animation-delay: -4s;
+    -webkit-animation-name: fallingDown1;
+            animation-name: fallingDown1;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  .cheers {
+    left: 0 !important;
+    -webkit-animation-delay: -7.5s;
+            animation-delay: -7.5s;
+    -webkit-animation-name: fallingDown1;
+            animation-name: fallingDown1;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  .hydrangea {
+    left: 25% !important;
+    -webkit-animation-delay: -5s;
+            animation-delay: -5s;
+    -webkit-animation-name: fallingDown1;
+            animation-name: fallingDown1;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  .giraffe {
+    left: 70% !important;
+    -webkit-animation-delay: -6s;
+            animation-delay: -6s;
+    -webkit-animation-name: fallingDown1;
+            animation-name: fallingDown1;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  .blueSky {
+    left: 65% !important;
+    -webkit-animation-delay: -4.5s;
+            animation-delay: -4.5s;
+    -webkit-animation-name: fallingDown1;
+            animation-name: fallingDown1;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
   }
 }
 /*# sourceMappingURL=start.css.map */

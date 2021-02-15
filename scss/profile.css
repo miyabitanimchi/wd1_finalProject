@@ -371,7 +371,7 @@
   100% {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
-    top: 200%;
+    top: 150%;
     opacity: 0;
   }
 }
@@ -399,7 +399,7 @@
   100% {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
-    top: 200%;
+    top: 150%;
     opacity: 0;
   }
 }
