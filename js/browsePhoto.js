@@ -625,14 +625,15 @@ $(document).ready(function(){ // Wait until the browser finish to read the html 
     }
     
 
-
+    // to show modal
     $(".boardForPhotos").on("click",function(){
+
+        $(".boardForPhotos").removeClass("scaleAll");
         //Grab the information for each post that user click
 
         //text() function will return all text (string) that we have inside the element
         //split() will return a array of string
         //find() will try to find the element that you choose inside the element
-        $(".boardForPhotos").removeClass("scaleAll");
 
         var dataPost = $(this).find(".datePost").text();
         var categoryPost = $(this).find(".category").text();
@@ -802,5 +803,19 @@ $(document).ready(function(){ // Wait until the browser finish to read the html 
     });
 
 
+
+     //unshift the new post   not completed...
+     $(".toPost").on("click", function(){
+        titleText = $("#title").val()
+        textareaText = $("#textarea").val();
+        dateText = $("#date").val();
+        categoryText = $("#categoryPD").val();
+
+        $(".datePost").text(dateText);
+        $(".category").text(categoryText);
+        $(".title").text(titleText);
+        $(".description").text(textareaText);
+       
+    });
 
 });

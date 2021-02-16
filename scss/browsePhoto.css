@@ -877,121 +877,18 @@ li {
 }
 
 @media screen and (max-width: 1100px) {
-  body {
-    background: red;
-  }
-  body .gridContainer {
-    display: -ms-grid;
-    display: grid;
+  .gridContainer {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: 120px minmax(300px, auto);
         grid-template-rows: 120px minmax(300px, auto);
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
-  body .gridContainer .header {
+  .gridContainer .header {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1 / 3;
-    position: -webkit-sticky;
-    position: sticky;
-    z-index: 100;
-    top: 0;
-    width: 100%;
-    background-color: rgba(255, 248, 193, 0.7);
   }
-  body .gridContainer .header .gridContainerForHeader {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    padding-left: 0;
-    padding-bottom: 20px;
-  }
-  body .gridContainer .header .gridContainerForHeader .sortPd .sortPulldown {
-    padding: 5px 30px;
-    border-radius: 10px;
-    color: gray;
-  }
-  body .gridContainer .header .gridContainerForHeader .filterPd .filterPulldown {
-    padding: 5px 30px;
-    border-radius: 10px;
-    color: gray;
-  }
-  body .gridContainer .header .gridContainerForHeader .miyasPhoto {
-    font-size: 1.1em;
-  }
-  body .gridContainer .header .gridContainerForHeader .links {
-    font-size: 1.1em;
-  }
-  body .gridContainer .header .gridContainerForHeader .profile {
-    display: inline;
-    position: relative;
-    margin: 0;
-    padding: 0;
-  }
-  body .gridContainer .header .gridContainerForHeader .profile:hover .dropDownMenu li {
-    overflow: visible;
-    height: 38px;
-  }
-  body .gridContainer .header .gridContainerForHeader .profile .dropDownMenu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    margin-top: 15px;
-    padding: 0;
-  }
-  body .gridContainer .header .gridContainerForHeader .profile .dropDownMenu li {
-    overflow: hidden;
-    width: 200%;
-    height: 0;
-    color: gray;
-    -webkit-transition: .2s;
-    transition: .2s;
-  }
-  body .gridContainer .header .gridContainerForHeader .profile .dropDownMenu a {
-    padding: 13px 15px;
-    text-align: left;
-    font-size: 1em;
-    font-weight: normal;
-    text-decoration: none;
-    line-height: 1;
-  }
-  body .gridContainer .header .gridContainerForHeader .mainList {
-    margin: 0;
-    padding: 13px 0;
-    color: gray;
-    font-size: 1.1em;
-    font-weight: bold;
-    line-height: 1;
-    text-decoration: none;
-    position: relative;
-  }
-  body .gridContainer .header .gridContainerForHeader .mainList:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: gray;
-    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-  }
-  body .gridContainer .header .gridContainerForHeader .mainList:hover:after {
-    width: 100%;
-    left: 0;
-  }
-  body .gridContainer .headerHamburgerMenu {
-    display: none;
-  }
-  body .gridContainer .containerGridPictures {
+  .gridContainer .containerGridPictures {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1 / 3;
@@ -1000,60 +897,17 @@ li {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
-  body .gridContainer .boardForPhotos {
-    background: linear-gradient(135deg, #fff2e6, #ffe5cc);
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    border-radius: 5%;
-    margin: 5%;
-    padding-top: 2%;
-    padding-bottom: 5%;
-  }
-  body .gridContainer .boardForPhotos figcaption {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-    padding-left: 10%;
-    font-size: .85em;
-  }
-  body .gridContainer .boardForPhotos img {
-    width: 80%;
-    height: 80%;
-    padding-top: 1%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
 }
 
 @media screen and (max-width: 650px) {
-  body {
-    background: greenyellow;
-  }
-  body .gridContainer {
-    display: -ms-grid;
-    display: grid;
+  .gridContainer {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 100px minmax(300px, auto);
-        grid-template-rows: 100px minmax(300px, auto);
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
-  body .gridContainer .header {
+  .gridContainer .header {
     display: none;
   }
-  body .gridContainer .headerHamburgerMenu {
+  .gridContainer .headerHamburgerMenu {
     display: initial;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
@@ -1065,7 +919,7 @@ li {
     width: 100%;
     background-color: rgba(255, 248, 193, 0.7);
   }
-  body .gridContainer .headerHamburgerMenu .makePulldownInline {
+  .gridContainer .headerHamburgerMenu .makePulldownInline {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1074,54 +928,54 @@ li {
             justify-content: space-evenly;
     padding-top: 20px;
   }
-  body .gridContainer .headerHamburgerMenu .makePulldownInline .sortPd .sortPulldown {
+  .gridContainer .headerHamburgerMenu .makePulldownInline .sortPd .sortPulldown {
     padding: 5px 30px;
     border-radius: 10px;
     color: gray;
     cursor: pointer;
   }
-  body .gridContainer .headerHamburgerMenu .makePulldownInline .filterPd .filterPulldown {
+  .gridContainer .headerHamburgerMenu .makePulldownInline .filterPd .filterPulldown {
     padding: 5px 30px;
     border-radius: 10px;
     color: gray;
     cursor: pointer;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu {
     margin: 0 auto;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu .nav-hidden {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu .nav-hidden {
     display: none;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu #menubtn {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu #menubtn {
     width: 100%;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu #menubtn img {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu #menubtn img {
     width: 5%;
     height: 5%;
     float: right;
     cursor: pointer;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu nav {
     background: rgba(255, 248, 193, 0.7);
     display: none;
     float: right;
     width: 100%;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu {
     text-align: right;
     position: relative;
     text-indent: 10px;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu li {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu li {
     padding-right: 10px !important;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .miyasPhoto {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .miyasPhoto {
     font-size: 1.1em;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .links {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .links {
     font-size: 1.1em;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile {
     font-size: 1.1em;
     display: inline;
     position: relative;
@@ -1129,14 +983,14 @@ li {
     padding: 0;
     left: -10px;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile .dropDownMenu {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile .dropDownMenu {
     position: absolute;
     top: 0%;
     left: -90px;
     margin-top: 40px;
     padding: 0;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile .dropDownMenu li {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile .dropDownMenu li {
     overflow: hidden;
     width: 100%;
     height: 0;
@@ -1144,17 +998,17 @@ li {
     -webkit-transition: .2s;
     transition: .2s;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile .dropDownMenu a {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile .dropDownMenu a {
     padding: 13px 15px;
     text-align: left;
     font-size: 1em;
     font-weight: normal;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile:hover .dropDownMenu li {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile:hover .dropDownMenu li {
     overflow: visible;
     height: 38px;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile a {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile a {
     display: block;
     margin: 0;
     padding: 13px 0;
@@ -1164,12 +1018,12 @@ li {
     line-height: 1;
     text-decoration: none;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile a:hover {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu nav ul.mobile_menu .profile a:hover {
     font-weight: bold;
     -webkit-transition: .2s;
     transition: .2s;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav .mainList {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu nav .mainList {
     display: block;
     margin: 0;
     padding: 13px 0;
@@ -1180,7 +1034,7 @@ li {
     text-decoration: none;
     position: relative;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav .mainList:after {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu nav .mainList:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -1192,11 +1046,11 @@ li {
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu nav .mainList:hover:after {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu nav .mainList:hover:after {
     width: 20%;
     right: 0;
   }
-  body .gridContainer .headerHamburgerMenu .createHamburgerMenu #nav-input:checked ~ nav {
+  .gridContainer .headerHamburgerMenu .createHamburgerMenu #nav-input:checked ~ nav {
     display: block;
     -webkit-animation: 1s fadeIn;
             animation: 1s fadeIn;
@@ -1217,7 +1071,7 @@ li {
       opacity: 1;
     }
   }
-  body .gridContainer .containerGridPictures {
+  .gridContainer .containerGridPictures {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
@@ -1225,39 +1079,6 @@ li {
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-  }
-  body .gridContainer .boardForPhotos {
-    background: linear-gradient(135deg, #fff2e6, #ffe5cc);
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    border-radius: 5%;
-    margin: 5%;
-    padding-top: 2%;
-    padding-bottom: 5%;
-  }
-  body .gridContainer .boardForPhotos figcaption {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-    padding-left: 10%;
-    font-size: .85em;
-  }
-  body .gridContainer .boardForPhotos img {
-    width: 80%;
-    height: 80%;
-    padding-top: 1%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 
@@ -1336,6 +1157,7 @@ li {
 .postAPhoto .dnd #icon_clear_button {
   display: none;
   position: absolute;
+  left: 100%;
   cursor: pointer;
   border-radius: 50%;
   background-color: gray;
@@ -1350,7 +1172,7 @@ li {
 }
 
 .postAPhoto .infoToPost .chooseDate {
-  font-size: 1.1em;
+  font-size: 1em;
   margin-bottom: 3%;
 }
 
@@ -1359,8 +1181,7 @@ li {
 }
 
 .postAPhoto .infoToPost .chooseDate #date {
-  padding: 1% 3%;
-  border-radius: 10px;
+  border-radius: 3px;
   outline: none;
 }
 
@@ -1385,6 +1206,11 @@ li {
 .postAPhoto .infoToPost .newCategoryArea #newCategory {
   border-radius: 3px;
   outline: none;
+  height: 22px;
+}
+
+.postAPhoto .infoToPost .newCategoryArea .toCreateNewCtgy {
+  border-radius: 3px;
 }
 
 .postAPhoto .infoToPost .putTitle {
@@ -1426,6 +1252,60 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .dnd {
+    margin-bottom: 5%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .postAPhoto {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .postAPhoto .dnd {
+    width: 400px;
+    height: 280px;
+    margin-bottom: 5%;
+  }
+  .postAPhoto .dnd #input_file {
+    width: 400px;
+    height: 280px;
+  }
+  .postAPhoto .dnd #preview_field {
+    width: 400px;
+    height: 280px;
+  }
+  .postAPhoto .dnd #preview_field img {
+    width: 400px;
+    height: 280px;
+  }
+  .postAPhoto .dnd #drop_area {
+    width: 400px;
+    height: 280px;
+  }
+  .postAPhoto #date {
+    padding: 1% 3%;
+    border-radius: 10px;
+    outline: none;
+  }
+  .postAPhoto .newCategoryArea {
+    margin-bottom: 5%;
+  }
+  .postAPhoto .newCategoryArea #newCategory {
+    border-radius: 3px;
+    outline: none;
+  }
+  .postAPhoto .putTitle label {
+    font-size: 1em;
+  }
+  .postAPhoto .putTitle #title {
+    font-size: 1em;
+  }
+  .postAPhoto .putDescription label {
+    font-size: 1em;
   }
 }
 /*# sourceMappingURL=browsePhoto.css.map */
