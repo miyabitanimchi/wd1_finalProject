@@ -231,3 +231,22 @@ $fontFamilyForStart: 'Barlow Condensed', sans-serif;
         opacity: 1;
     }
 }
+
+//animation for flash on the profile page 
+@keyframes rotateFlash {
+    0% {
+        transform: scale(.95);
+    }
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.95);
+    }
+    75% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(.95);
+    }
+}

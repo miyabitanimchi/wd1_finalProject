@@ -18,8 +18,14 @@ $(document).ready(function(){
         }
 
         $(".defaultSmile").hide();
-        var random = Math.floor(Math.random()*$(".randomFace").length);
-        $(".randomFace").hide().eq(random).show();
+        var random = Math.floor(Math.random() * $(".randomFace").length); //math floor/random function
+        $(".randomFace").hide().eq(random).show();  //can get specific element by index
+
+        //e.g. console.log(Math.floor(5.95));
+        //...epected output: 5
+
+        //e.g. Math.floor(Math.random() * 10);
+        // returns a random integer from 0 to 9
         
     });
 

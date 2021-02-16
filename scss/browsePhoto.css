@@ -429,6 +429,52 @@
   }
 }
 
+@-webkit-keyframes rotateFlash {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  25% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+}
+
+@keyframes rotateFlash {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  25% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -654,6 +700,29 @@ li {
   }
 }
 
+@keyframes rotateFlash {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  25% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+}
+
 .scaleAll {
   -webkit-animation-name: scaleThePage;
           animation-name: scaleThePage;
@@ -871,9 +940,16 @@ li {
   background: linear-gradient(to right, #ed213a, #93291e);
   color: #ffeadb;
   font-family: "Barlow Condensed", sans-serif;
-  padding: 15px 50px;
+  padding: 10px 50px;
   border-radius: 30px;
   font-size: 1.3em;
+}
+
+.buttonToPost .postButton:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 @media screen and (max-width: 1100px) {
@@ -1160,7 +1236,7 @@ li {
   left: 100%;
   cursor: pointer;
   border-radius: 50%;
-  background-color: gray;
+  background-color: #fff;
   border: 1px solid gray;
   padding-left: 5px;
   padding-right: 5px;
@@ -1186,7 +1262,7 @@ li {
 }
 
 .postAPhoto .infoToPost .categoryArea {
-  font-size: 1.1em;
+  font-size: 1em;
   margin-bottom: 1%;
 }
 

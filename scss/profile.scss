@@ -1,5 +1,5 @@
 @import './common';
-@import './start.css';
+@import './style';
 
 .gridForProfile {
     display: grid;
@@ -12,6 +12,7 @@
         top: 0;
         width: 100%;
         background-color: $ColorWithTransparency;
+        z-index: 100;
 
         .gridContainerForHeader {
             display: flex;
@@ -29,18 +30,11 @@
         
             .miyasPhoto {
                 font-size: $fontsizeForHeader;
-        
-                a {
-                    @include ForAInHeader(block);
-                }
             }
         
             .links {
                 font-size: $fontsizeForHeader;
         
-                a {
-                    @include ForAInHeader(block);
-                }
             }
         
             .profile {
@@ -48,40 +42,76 @@
                 position: relative;
                 margin: 0;
                 padding: 0;
+                font-size: $fontsizeForHeader;
         
                 &:hover .dropDownMenu li {
                     overflow: visible;
                     height: 38px;
-                    border-bottom: 1px solid #fff;
                 }
         
-                a {
-                    @include ForAInHeader(block);
-                }
                 .dropDownMenu {
                     position: absolute;
                     top: 100%;
                     left: 0;
-                    margin: 0;
+                    margin-top: 15px;
                     padding: 0;
         
                     li {
                         overflow: hidden;
                         width: 200%;
                         height: 0;
-                        color: gray;
+                        color: $colorForHeaderFont;
                         transition: .2s;
                     }
         
                     a {
                         padding: 13px 15px;
                         text-align: left;
-                        font-size: $fontsizeForHeader;
+                        font-size: $colorForHeaderFont;
+                        font-size: $fontsizeForHeaderDD;
                         font-weight: normal;
+                        text-decoration: none;
+                        line-height: 1;
+
+                        &:hover {
+                            font-weight: bold;
+                            transition: .2s;
+                        }
                     }
                 }
              }
+             .mainList {
+                margin: 0;
+                padding: 13px 0;
+                color: $colorForHeaderFont;
+                font-size: $fontsizeForHeader;
+                font-weight: bold;
+                line-height: 1;
+                text-decoration: none;
+                position: relative;
+
+                &:after {    
+                    background: none repeat scroll 0 0 transparent;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    left: 50%;
+                    position: absolute;
+                    background: $colorForHeaderFont;
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    width: 0;
+                  }
+                  &:hover:after { 
+                    width: 100%; 
+                    left: 0; 
+                  }
+            }
          }
+    }
+    //Hamburger Menu
+    .headerHamburgerMenu {
+        display: none;
     }
 
     .profilePhoto {
@@ -101,6 +131,9 @@
                 height: 400px;
                 position: relative;
                 text-align: center;
+                animation-name: rotateFlash;
+                animation-duration: 1.5s;
+                animation-iteration-count: infinite;
             
                 &::before,
                 &::after {
@@ -126,12 +159,14 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                // transform: translate(-50%, -50%);
     
                 img {
                     clip-path: circle(50% at 50% 50%);
                     height: 400px;
                     width: 400px;
+                    animation-name: rotateFlash;
+                    animation-duration: 1.5s;
+                    animation-iteration-count: infinite;
                 }
             }
             
@@ -141,24 +176,92 @@
 
     .profile {
         grid-column: 7 / 13;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        // display: grid;
+        // grid-template-columns: repeat(6, 1fr);
 
         h1 {
-            grid-column: 2 / 6;
-            padding-top: 25%;
+            // grid-column: 2 / 6;
+            padding-top: 20%;
         }
 
         .joinWhen {
-            grid-column: 2 / 6;
+            margin-bottom: 1%;
         }
 
         .liveWhere {
-           grid-column: 2 / 6;
+           margin-bottom: 1%;
         }
 
         p {
-            grid-column: 2 / 6;
+            margin-top: 10%;
         }
     }
 }
+
+@media screen and (max-width: 1179px) {
+    .flash {
+        width: 300px !important;
+        height: 300px !important;
+    
+        &::before,
+        &::after {
+        height: 300px !important;
+        width: 300px !important;
+        }
+    
+    }
+
+    .profileImg {
+        
+        img {
+            height: 300px !important;
+            width: 300px !important;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 849px) {
+
+    .profilePhoto {
+        grid-column: 1 / 13 !important;
+        .flash {
+            width: 300px !important;
+            height: 300px !important;
+        
+            &::before,
+            &::after {
+            height: 300px !important;
+            width: 300px !important;
+            }
+        
+        }    
+
+    .profileImg {
+        
+        img {
+            height: 300px !important;
+            width: 300px !important;
+        }
+    }  
+}
+
+    .profile {
+        grid-column: 1 / 13 !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .miyasPhoto {
+        font-size: .9em !important;
+    }
+
+    .links {
+        font-size: .9em !important;
+
+    }
+    .profile {
+        font-size: .9em !important;
+    }
+}
+

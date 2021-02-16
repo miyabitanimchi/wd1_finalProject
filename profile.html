@@ -25,10 +25,10 @@
                         <option value="food">Food</option>
                     </select>
                 </li>
-                <li class="miyasPhoto"><a href="./browsePhoto.html">My photos</a></li>
-                <li class="links"><a href="#">Links</a></li>
+                <li class="miyasPhoto"><a class="mainList" href="./browsePhoto.html">My photos</a></li>
+                <li class="links"><a class="mainList" href="#">Links</a></li>
                 <li class="profile">
-                    <a href="./profile.html">Miyabi</a>
+                    <a class="mainList" href="./profile.html">Miyabi</a>
                     <ul class="dropDownMenu">
                         <li><a href="#">Settings</a></li>
                         <li><a href="#">Log out</a></li>
@@ -36,27 +36,65 @@
                 </li>
             </ul>
         </nav>
-        <div class="profilePhoto">
-            <div class="flashForCamera">
-                <div class="flash"></div>
-                <div class="profileImg">
-                    <img src="./img/meAndAutumn.jpg" alt="profilePhoto">
-                </div>    
+
+        <!--Hamburger Menu-->
+        <nav class="headerHamburgerMenu">
+            <ul class="makePulldownInline">
+                <li class="sortPd">
+                    <select class="sortPulldown triggerSort" name="sort" id="sort">
+                        <option value="newToOld">New to old</option>
+                        <option value="oldTONew">Old to new</option>
+                    </select>
+                </li>
+                <li class="filterPd">
+                    <select class="filterPulldown triggerFilter" name="filter" id="filter">
+                        <option value="all">All photos</option>
+                        <option value="people">People</option>
+                        <option value="nature">Nature</option>
+                        <option value="food">Food</option>
+                    </select>
+                </li>
+            </ul>
+            <div class="createHamburgerMenu">
+                <input id="nav-input" type="checkbox" class="nav-hidden">
+                <label id="menubtn" for="nav-input"><img src="./img/hamburgerMenu.png" alt="hamburgerMenu"></label>
+                <nav>
+                    <ul class="mobile_menu">
+                        <li class="miyasPhoto"><a class="mainList" href="./browsePhoto.html">My photos</a></li>
+                        <li class="links"><a class="mainList" href="#">Links</a></li>
+                        <li class="profile">
+                            <a class="mainList" href="./profile.html">Miyabi</a>
+                            <ul class="dropDownMenu">
+                                <li><a class="dropDownList" href="#">Settings</a></li>
+                                <li><a class="dropDownList" href="#">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        </div>
-        <div class="profile">
-            <h1>Miyabi</h1>
-            <span class="joinWhen"><i class="far fa-clock"></i>Joined June 2020</span>
-            <span class="liveWhere"><i class="fas fa-map-marker-alt">Vancouver, Canada</i></span>
-            <p>
-                description description description description description description 
-                description description description description description description 
-                description description description description description description 
-                description description description description description description 
-                description description description description description description 
-                description description description description description description 
-            </p>
-        </div>
+        </nav>
+        
+            <div class="profilePhoto">
+                <div class="flashForCamera">
+                    <div class="flash"></div>
+                    <div class="profileImg">
+                        <img src="./img/meAndAutumn.jpg" alt="profilePhoto">
+                    </div>    
+                </div>
+            </div>
+            <div class="profile">
+                <h1>Miyabi</h1>
+                <div class="joinWhen"><i class="far fa-clock"></i>Joined June 2020</div>
+                <div class="liveWhere"><i class="fas fa-map-marker-alt">Vancouver, Canada</i></div>
+                <p>
+                    description description description description description description 
+                    description description description description description description 
+                    description description description description description description 
+                    description description description description description description 
+                    description description description description description description 
+                    description description description description description description 
+                </p>
+            </div>
     </div>
 </body>
 </html>

@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap");
-@import url(/Users/miyabi/Desktop/finalProject/scss/start.css);
 @-webkit-keyframes animeForTitle {
   0% {
     -webkit-transform: scale(0);
@@ -430,6 +429,52 @@
   }
 }
 
+@-webkit-keyframes rotateFlash {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  25% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+}
+
+@keyframes rotateFlash {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  25% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -438,6 +483,244 @@ body {
 
 li {
   list-style: none;
+}
+
+@keyframes animeForTitle {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes takeAPhoto {
+  0% {
+    top: -15%;
+  }
+  50% {
+    top: -13%;
+  }
+  100% {
+    top: -15%;
+  }
+}
+
+@keyframes flashScale {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes movePhoto1 {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
+
+@keyframes movePhoto2 {
+  0% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+@keyframes movePhoto3 {
+  0% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+
+@keyframes buttonTransparent {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity1 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity2 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    top: 50%;
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity4 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    left: -100%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity5 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    bottom: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleNOpacity6 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(6);
+            transform: scale(6);
+    bottom: 100%;
+    left: -100%;
+    opacity: 0;
+  }
+}
+
+@keyframes fallingDown1 {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: -20%;
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    top: 150%;
+    opacity: 0;
+  }
+}
+
+@keyframes scaleThePage {
+  0% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: .5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateFlash {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  25% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
 }
 
 .gridForProfile {
@@ -458,6 +741,7 @@ li {
   top: 0;
   width: 100%;
   background-color: rgba(255, 248, 193, 0.7);
+  z-index: 100;
 }
 
 .gridForProfile .header .gridContainerForHeader {
@@ -483,30 +767,8 @@ li {
   font-size: 1.1em;
 }
 
-.gridForProfile .header .gridContainerForHeader .miyasPhoto a {
-  display: block;
-  margin: 0;
-  padding: 13px 0;
-  color: gray;
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 1;
-  text-decoration: none;
-}
-
 .gridForProfile .header .gridContainerForHeader .links {
   font-size: 1.1em;
-}
-
-.gridForProfile .header .gridContainerForHeader .links a {
-  display: block;
-  margin: 0;
-  padding: 13px 0;
-  color: gray;
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 1;
-  text-decoration: none;
 }
 
 .gridForProfile .header .gridContainerForHeader .profile {
@@ -514,30 +776,19 @@ li {
   position: relative;
   margin: 0;
   padding: 0;
+  font-size: 1.1em;
 }
 
 .gridForProfile .header .gridContainerForHeader .profile:hover .dropDownMenu li {
   overflow: visible;
   height: 38px;
-  border-bottom: 1px solid #fff;
-}
-
-.gridForProfile .header .gridContainerForHeader .profile a {
-  display: block;
-  margin: 0;
-  padding: 13px 0;
-  color: gray;
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 1;
-  text-decoration: none;
 }
 
 .gridForProfile .header .gridContainerForHeader .profile .dropDownMenu {
   position: absolute;
   top: 100%;
   left: 0;
-  margin: 0;
+  margin-top: 15px;
   padding: 0;
 }
 
@@ -553,8 +804,51 @@ li {
 .gridForProfile .header .gridContainerForHeader .profile .dropDownMenu a {
   padding: 13px 15px;
   text-align: left;
-  font-size: 1.1em;
+  font-size: gray;
+  font-size: 1em;
   font-weight: normal;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.gridForProfile .header .gridContainerForHeader .profile .dropDownMenu a:hover {
+  font-weight: bold;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.gridForProfile .header .gridContainerForHeader .mainList {
+  margin: 0;
+  padding: 13px 0;
+  color: gray;
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+  position: relative;
+}
+
+.gridForProfile .header .gridContainerForHeader .mainList:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: gray;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.gridForProfile .header .gridContainerForHeader .mainList:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.gridForProfile .headerHamburgerMenu {
+  display: none;
 }
 
 .gridForProfile .profilePhoto {
@@ -585,6 +879,12 @@ li {
   height: 400px;
   position: relative;
   text-align: center;
+  -webkit-animation-name: rotateFlash;
+          animation-name: rotateFlash;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .gridForProfile .profilePhoto .flashForCamera .flash::before, .gridForProfile .profilePhoto .flashForCamera .flash::after {
@@ -618,40 +918,85 @@ li {
           clip-path: circle(50% at 50% 50%);
   height: 400px;
   width: 400px;
+  -webkit-animation-name: rotateFlash;
+          animation-name: rotateFlash;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .gridForProfile .profile {
   -ms-grid-column: 7;
   -ms-grid-column-span: 6;
   grid-column: 7 / 13;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
 }
 
 .gridForProfile .profile h1 {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 4;
-  grid-column: 2 / 6;
-  padding-top: 25%;
+  padding-top: 20%;
 }
 
 .gridForProfile .profile .joinWhen {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 4;
-  grid-column: 2 / 6;
+  margin-bottom: 1%;
 }
 
 .gridForProfile .profile .liveWhere {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 4;
-  grid-column: 2 / 6;
+  margin-bottom: 1%;
 }
 
 .gridForProfile .profile p {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 4;
-  grid-column: 2 / 6;
+  margin-top: 10%;
+}
+
+@media screen and (max-width: 1179px) {
+  .flash {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .flash::before, .flash::after {
+    height: 300px !important;
+    width: 300px !important;
+  }
+  .profileImg img {
+    height: 300px !important;
+    width: 300px !important;
+  }
+}
+
+@media screen and (max-width: 849px) {
+  .profilePhoto {
+    -ms-grid-column: 1 !important;
+    -ms-grid-column-span: 12 !important;
+    grid-column: 1 / 13 !important;
+  }
+  .profilePhoto .flash {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .profilePhoto .flash::before, .profilePhoto .flash::after {
+    height: 300px !important;
+    width: 300px !important;
+  }
+  .profilePhoto .profileImg img {
+    height: 300px !important;
+    width: 300px !important;
+  }
+  .profile {
+    -ms-grid-column: 1 !important;
+    -ms-grid-column-span: 12 !important;
+    grid-column: 1 / 13 !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .miyasPhoto {
+    font-size: .9em !important;
+  }
+  .links {
+    font-size: .9em !important;
+  }
+  .profile {
+    font-size: .9em !important;
+  }
 }
 /*# sourceMappingURL=profile.css.map */
