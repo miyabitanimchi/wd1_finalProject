@@ -663,7 +663,13 @@ $(document).ready(function(){ // Wait until the browser finish to read the html 
     });
 
     
-    //cut from here
+    //create the function and build the page
+    function CreateThePage(arr) {
+        var wrap = $(".containerGridPictures") // select the element that we will append the pictures 
+        for(i=0; i< arr.length; i++){
+            wrap.append("<figure  class='boardForPhotos'><figcaption class='datePost'> Date: " + arr[i].data + "</figcaption> <figcaption class='category'> Category: " + arr[i].category + "</figcaption><img src=" + arr[i].image + " /> <div class='title'>"+ arr[i].title + "</div><div class='description'>" + arr[i].description + "</div>");
+        }
+    }
 
     
 
@@ -708,16 +714,6 @@ $(document).ready(function(){ // Wait until the browser finish to read the html 
         descriModay.empty();
         descriModay.append(description);
     })
-
-
-    //create the function and build the page
-    function CreateThePage(arr) {
-        var wrap = $(".containerGridPictures") // select the element that we will append the pictures 
-        for(i=0; i< arr.length; i++){
-               // wrap.append("<figure data-bs-toggle='modal'data-bs-target='model1' class='boardForPhotos'><figcaption> Date: " + arr[i].data + "</figcaption> <figcaption> Category: " + arr[i].category + "</figcaption><img src=" + arr[i].image + " />");
-            wrap.append("<figure  class='boardForPhotos'><figcaption class='datePost'> Date: " + arr[i].data + "</figcaption> <figcaption class='category'> Category: " + arr[i].category + "</figcaption><img src=" + arr[i].image + " /> <div class='title'>"+ arr[i].title + "</div><div class='description'>" + arr[i].description + "</div>");
-        }
-    }
 
 
     //Function for creating fake like
@@ -893,7 +889,7 @@ $(document).ready(function(){ // Wait until the browser finish to read the html 
         });
         });
 
-        
+
     //add category
     $(function(){
         $(".toCreateNewCtgy").click(function(){
